@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "revision": 1,
   "enabled": true,
-  "image": "",
+  "image": "https://monagyai.github.io/designlibrary/assets/header.webp",
   "heightDp": 116,
   "scaleType": "centerCrop"
 }
