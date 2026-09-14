@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "revision": 3,
+  "features": {
+    "randomLibrary": {"enabled": true, "avoidRepeatUntilPoolExhausted": true},
+    "dailyTreasure": {"enabled": true, "requiresRewarded": true, "poolMode": "allEnabled", "categoryIndexes": [], "maxRewardedUnlocksPerDay": 50, "avoidRepeatUntilPoolExhausted": true}
+  },
+  "ads": {
+    "enabled": false,
+    "banner": {"enabled": true},
+    "interstitial": {"enabled": true, "everyNavigations": 4, "dailyCap": 8},
+    "rewarded": {"enabled": true}
+  }
+}
