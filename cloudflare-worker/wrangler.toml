@@ -1,0 +1,6 @@
+name = "designlibrary-push"
+main = "fcm-worker.js"
+compatibility_date = "2026-09-14"
+
+[vars]
+ALLOWED_ORIGIN = "https://monagyai.github.io"
