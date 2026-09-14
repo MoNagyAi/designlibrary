@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "enabled": false,
+  "firebase": {
+    "appId": "",
+    "apiKey": "",
+    "projectId": "",
+    "senderId": ""
+  },
+  "workerUrl": "",
+  "defaultTopic": "all"
+}
