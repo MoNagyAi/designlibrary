@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>إرسال إشعارات · Design Library</title>
+<style>
+:root{--bg:#06111b;--panel:#0d1b29;--gold:#e4b344;--line:#35516a;--text:#fff;--muted:#aeb8c1}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#07121d,#02070c);color:var(--text);font:15px Tahoma,Arial;min-height:100vh}main{max-width:780px;margin:auto;padding:22px}h1{color:var(--gold);margin-bottom:6px}p{color:var(--muted);line-height:1.8}section{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0}label{display:block;margin:12px 0}input,textarea,select,button{font:inherit}input,textarea,select{width:100%;padding:11px;border-radius:10px;border:1px solid #4c6173;background:#07121d;color:#fff}textarea{min-height:90px;resize:vertical}button{cursor:pointer;border:1px solid #9d7627;background:#21190b;color:#ffd76a;border-radius:11px;padding:11px 16px;min-height:46px}button:disabled{opacity:.45;cursor:not-allowed}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.status{padding:12px;border-radius:10px;background:#091620;border:1px solid #2d485d;color:#d6e1e8}.ok{color:#7fe09d}.err{color:#ff9c9c}.hint{font-size:12px;color:#9ca9b4}@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<h1>إرسال Push Notification</h1>
+<p>إرسال إشعار لكل المستخدمين أو حسب لغة التطبيق. مفتاح الإدارة لا يتم حفظه في GitHub.</p>
+<section>
+<div class="grid">
+<label>المستلمون<select id="topic"><option value="all">كل المستخدمين</option><option value="lang_ar">مستخدمو العربية</option><option value="lang_en">English users</option></select></label>
+<label>رابط الفتح داخل التطبيق<input id="url" dir="ltr" placeholder="مثال: كروت_شخصية_عربي.html أو https://..."></label>
+</div>
+<label>عنوان الإشعار<input id="title" maxlength="80" placeholder="مثال: مكتبة جديدة 🎨"></label>
+<label>نص الإشعار<textarea id="body" maxlength="300" placeholder="اكتب رسالة قصيرة وواضحة"></textarea></label>
+<label>Admin Key<input id="key" type="password" autocomplete="off" placeholder="المفتاح السري الموجود في Cloudflare Worker"></label>
+<div class="hint">يُحفظ المفتاح داخل هذه الجلسة فقط في المتصفح، وليس داخل ملفات الموقع.</div>
+<br><button id="send">إرسال الإشعار</button>
+</section>
+<section><div id="status" class="status">جاري تحميل إعدادات Push...</div></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);let cfg=null;
+async function load(){try{const r=await fetch('push-config.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('تعذر تحميل push-config.json');cfg=await r.json();if(!cfg.enabled)$('status').innerHTML='Push غير مفعّل حاليًا من Pages CMS.';else if(!cfg.workerUrl)$('status').innerHTML='أضف Worker URL في Pages CMS أولًا.';else $('status').innerHTML='<span class="ok">جاهز للإرسال.</span>';$('send').disabled=!cfg.enabled||!cfg.workerUrl}catch(e){$('status').innerHTML='<span class="err">'+e.message+'</span>';$('send').disabled=true}}
+$('key').value=sessionStorage.getItem('dl_push_admin_key')||'';
+$('key').addEventListener('input',()=>sessionStorage.setItem('dl_push_admin_key',$('key').value));
+$('send').onclick=async()=>{if(!cfg?.workerUrl)return;const title=$('title').value.trim(),body=$('body').value.trim(),key=$('key').value.trim();if(!title||!body||!key){$('status').innerHTML='<span class="err">اكتب العنوان والرسالة وAdmin Key.</span>';return}$('send').disabled=true;$('status').textContent='جاري الإرسال...';try{const r=await fetch(cfg.workerUrl,{method:'POST',headers:{'Content-Type':'application/json','X-Admin-Key':key},body:JSON.stringify({topic:$('topic').value,title,body,url:$('url').value.trim()})});const data=await r.json().catch(()=>({}));if(!r.ok)throw Error(data.error||'فشل الإرسال');$('status').innerHTML='<span class="ok">تم إرسال الإشعار بنجاح ✅</span>';}catch(e){$('status').innerHTML='<span class="err">'+e.message+'</span>'}finally{$('send').disabled=false}};
+load();
+</script>
+</body>
+</html>
