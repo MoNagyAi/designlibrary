@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
+  "revision": 2,
   "features": {
     "randomLibrary": {
       "enabled": true,
@@ -28,20 +28,20 @@
   },
   "ads": {
     "enabled": false,
-    "appId": "",
+    "appId": "ca-app-pub-2923061539473457~1000884699",
     "banner": {
       "enabled": true,
-      "adUnitId": ""
+      "adUnitId": "ca-app-pub-2923061539473457/3743603143"
     },
     "interstitial": {
       "enabled": true,
-      "adUnitId": "",
+      "adUnitId": "ca-app-pub-2923061539473457/4244974051",
       "everyNavigations": 6,
       "dailyCap": 4
     },
     "rewarded": {
       "enabled": true,
-      "adUnitId": ""
+      "adUnitId": "ca-app-pub-2923061539473457/1548684644"
     }
   }
 }
