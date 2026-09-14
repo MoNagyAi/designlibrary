@@ -1,0 +1,7 @@
+
+body{padding:12px!important;font-family:Tahoma,Arial,sans-serif!important}
+h1{font-size:22px!important;line-height:1.8!important;overflow-wrap:anywhere}
+.cards-container{grid-template-columns:repeat(auto-fit,minmax(145px,1fr))!important;gap:12px!important}
+.card-title{overflow-wrap:anywhere}.card-img{height:140px!important}
+input{max-width:100%;box-sizing:border-box}img{max-width:100%}
+@media(min-width:700px){body{padding:20px!important}.cards-container{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))!important}.card-img{height:150px!important}}
