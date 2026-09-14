@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "features": {
+    "randomLibrary": {
+      "enabled": true,
+      "avoidImmediateRepeat": true
+    },
+    "dailyTreasure": {
+      "enabled": true,
+      "requiresRewarded": true,
+      "title": {
+        "ar": "افتح كنز التصميم اليومي",
+        "en": "Unlock Today’s Design Treasure"
+      },
+      "subtitle": {
+        "ar": "شاهد إعلانًا قصيرًا لفتح مورد اليوم المميز.",
+        "en": "Watch a short ad to unlock today’s featured resource."
+      },
+      "poolMode": "allEnabled",
+      "categoryIndexes": [],
+      "maxRewardedUnlocksPerDay": 5
+    },
+    "smartRandom": {
+      "enabled": false,
+      "requiresRewarded": true
+    }
+  },
+  "ads": {
+    "enabled": false,
+    "appId": "",
+    "banner": {
+      "enabled": true,
+      "adUnitId": ""
+    },
+    "interstitial": {
+      "enabled": true,
+      "adUnitId": "",
+      "everyNavigations": 6,
+      "dailyCap": 4
+    },
+    "rewarded": {
+      "enabled": true,
+      "adUnitId": ""
+    }
+  }
+}
