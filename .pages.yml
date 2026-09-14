@@ -306,9 +306,13 @@ content:
             type: object
             fields:
               - name: appId
-                label: "Firebase App ID"
+                label: "Firebase App ID — Release"
                 type: string
-                description: "مثال: 1:123456789:android:abcdef"
+                description: "للحزمة dlfatcom.buntyfrombengal.riyantalks"
+              - name: debugAppId
+                label: "Firebase App ID — Debug"
+                type: string
+                description: "اختياري للاختبار من Android Studio للحزمة dlfatcom.buntyfrombengal.riyantalks.debug"
               - name: apiKey
                 label: "Firebase API Key"
                 type: string
