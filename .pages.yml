@@ -1,0 +1,278 @@
+media:
+  input: cms-media
+  output: /designlibrary/cms-media
+  rename: safe
+  categories: [image]
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      update: "cms: update {path}"
+      create: "cms: create {path}"
+      delete: "cms: delete {path}"
+      rename: "cms: rename {oldPath} -> {newPath}"
+
+content:
+  - name: app
+    label: "التطبيق والمكتبة"
+    type: group
+    items:
+      - name: app_config
+        label: "الأقسام والترجمة والتواصل"
+        type: file
+        path: app-config.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: schemaVersion
+            label: "Schema Version"
+            type: number
+            readonly: true
+          - name: revision
+            label: "Revision"
+            type: number
+            description: "يمكن زيادته عند عمل تحديث كبير."
+          - name: announcement
+            label: "رسالة التطبيق"
+            type: object
+            fields:
+              - name: ar
+                label: "الرسالة بالعربية"
+                type: text
+              - name: en
+                label: "English message"
+                type: text
+          - name: social
+            label: "روابط التواصل"
+            type: object
+            fields:
+              - name: facebook
+                label: "Facebook"
+                type: string
+              - name: youtube
+                label: "YouTube"
+                type: string
+              - name: whatsapp
+                label: "WhatsApp"
+                type: string
+                description: "مثال: https://wa.me/201xxxxxxxxx"
+          - name: categories
+            label: "أقسام المكتبة"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{ar} · {en}"
+            fields:
+              - name: index
+                label: "الترتيب"
+                type: number
+              - name: ar
+                label: "الاسم بالعربية"
+                type: string
+                required: true
+              - name: en
+                label: "English name"
+                type: string
+                required: true
+              - name: page
+                label: "اسم الصفحة / الرابط"
+                type: string
+                required: true
+              - name: thumbnails
+                label: "صور المعاينة"
+                type: string
+                list: true
+              - name: enabled
+                label: "إظهار القسم"
+                type: boolean
+
+      - name: header_config
+        label: "الهيدر والهوية"
+        type: file
+        path: header-config.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: schemaVersion
+            label: "Schema Version"
+            type: number
+            readonly: true
+          - name: revision
+            label: "Revision"
+            type: number
+          - name: enabled
+            label: "تفعيل الهيدر البعيد"
+            type: boolean
+          - name: image
+            label: "رابط صورة الهيدر"
+            type: string
+            description: "ضع رابط HTTPS مباشر للصورة. المقاس المقترح 1500×500."
+          - name: heightDp
+            label: "ارتفاع الهيدر"
+            type: number
+            options:
+              min: 70
+              max: 220
+          - name: scaleType
+            label: "طريقة عرض الصورة"
+            type: select
+            options:
+              values:
+                - name: centerCrop
+                  label: "ملء المساحة"
+                - name: fitCenter
+                  label: "إظهار الصورة كاملة"
+
+  - name: features
+    label: "الميزات والإعلانات"
+    type: group
+    items:
+      - name: monetization
+        label: "Random / Treasure / Ads"
+        type: file
+        path: monetization-config-v3.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: schemaVersion
+            label: "Schema Version"
+            type: number
+            readonly: true
+          - name: revision
+            label: "Revision"
+            type: number
+          - name: features
+            label: "الميزات"
+            type: object
+            fields:
+              - name: randomLibrary
+                label: "Random Library"
+                type: object
+                fields:
+                  - name: enabled
+                    label: "تفعيل"
+                    type: boolean
+                  - name: avoidRepeatUntilPoolExhausted
+                    label: "منع التكرار حتى انتهاء القائمة"
+                    type: boolean
+              - name: dailyTreasure
+                label: "Daily Treasure"
+                type: object
+                fields:
+                  - name: enabled
+                    label: "تفعيل"
+                    type: boolean
+                  - name: requiresRewarded
+                    label: "يتطلب Rewarded Ad"
+                    type: boolean
+                  - name: poolMode
+                    label: "مصدر الأقسام"
+                    type: select
+                    options:
+                      values:
+                        - name: allEnabled
+                          label: "كل الأقسام المفعلة"
+                        - name: selected
+                          label: "أقسام محددة"
+                  - name: categoryIndexes
+                    label: "أرقام الأقسام المحددة"
+                    type: number
+                    list: true
+                  - name: maxRewardedUnlocksPerDay
+                    label: "أقصى مرات الفتح يوميًا"
+                    type: number
+                    options:
+                      min: 1
+                      max: 100
+                  - name: avoidRepeatUntilPoolExhausted
+                    label: "منع تكرار الكنوز"
+                    type: boolean
+          - name: ads
+            label: "الإعلانات"
+            type: object
+            fields:
+              - name: enabled
+                label: "تفعيل الإعلانات الحقيقية"
+                type: boolean
+              - name: banner
+                label: "Banner"
+                type: object
+                fields:
+                  - name: enabled
+                    label: "تفعيل Banner"
+                    type: boolean
+              - name: interstitial
+                label: "Interstitial"
+                type: object
+                fields:
+                  - name: enabled
+                    label: "تفعيل"
+                    type: boolean
+                  - name: everyNavigations
+                    label: "بعد كل عدد تنقلات"
+                    type: number
+                    options:
+                      min: 1
+                      max: 30
+                  - name: dailyCap
+                    label: "الحد اليومي — 0 بدون حد"
+                    type: number
+                    options:
+                      min: 0
+                      max: 100
+              - name: actionInterstitial
+                label: "إعلانات الإجراءات"
+                type: object
+                fields:
+                  - name: enabled
+                    label: "تفعيل"
+                    type: boolean
+                  - name: everyActions
+                    label: "إعلان بعد كل عدد إجراءات"
+                    type: number
+                    options:
+                      min: 1
+                      max: 20
+                  - name: minSecondsBetweenAds
+                    label: "أقل فاصل بالثواني"
+                    type: number
+                    options:
+                      min: 0
+                      max: 600
+                  - name: showNotice
+                    label: "إظهار تنبيه قبل الإعلان"
+                    type: boolean
+                  - name: actions
+                    label: "الإجراءات التي تحتسب"
+                    type: select
+                    list: true
+                    options:
+                      values:
+                        - name: view
+                          label: "View"
+                        - name: download
+                          label: "Download"
+                        - name: copy
+                          label: "Copy"
+                        - name: share
+                          label: "Share"
+              - name: rewarded
+                label: "Rewarded"
+                type: object
+                fields:
+                  - name: enabled
+                    label: "تفعيل Rewarded"
+                    type: boolean
