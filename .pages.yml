@@ -276,3 +276,60 @@ content:
                   - name: enabled
                     label: "تفعيل Rewarded"
                     type: boolean
+
+  - name: notifications
+    label: "الإشعارات Push"
+    type: group
+    items:
+      - name: push_config
+        label: "Firebase وإعداد الإرسال"
+        type: file
+        path: push-config.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: schemaVersion
+            label: "Schema Version"
+            type: number
+            readonly: true
+          - name: revision
+            label: "Revision"
+            type: number
+          - name: enabled
+            label: "تفعيل Push Notifications"
+            type: boolean
+          - name: firebase
+            label: "Firebase Android Config"
+            type: object
+            fields:
+              - name: appId
+                label: "Firebase App ID"
+                type: string
+                description: "مثال: 1:123456789:android:abcdef"
+              - name: apiKey
+                label: "Firebase API Key"
+                type: string
+              - name: projectId
+                label: "Firebase Project ID"
+                type: string
+              - name: senderId
+                label: "Sender ID / Project Number"
+                type: string
+          - name: workerUrl
+            label: "Cloudflare Worker URL"
+            type: string
+            description: "مثال: https://designlibrary-push.account.workers.dev"
+          - name: defaultTopic
+            label: "Default Topic"
+            type: select
+            options:
+              values:
+                - name: all
+                  label: "كل المستخدمين"
+                - name: lang_ar
+                  label: "العربية"
+                - name: lang_en
+                  label: "English"
