@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>إدارة الربح · Design Library</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080808;color:#eee8dc;font:15px Tahoma,Arial;line-height:1.7}header{padding:28px 5vw;border-bottom:1px solid #665026;background:linear-gradient(110deg,#18130b,#080808)}h1{margin:0;color:#e4b344}h2{font-size:20px;margin-top:0}h3{font-size:16px;color:#f0ca72}p{color:#bfb8a9}main{max-width:1150px;margin:auto;padding:24px}section{background:#151515;border:1px solid #393226;border-radius:14px;padding:22px;margin-bottom:22px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}button,input,textarea,select{font:inherit}button{cursor:pointer;min-height:44px;padding:9px 16px;border-radius:9px;border:1px solid #77602e;background:#211c12;color:#f0ca72}button:hover{background:#3c3019}input,textarea,select{width:100%;padding:11px;border:1px solid #494131;border-radius:8px;background:#101010;color:#f8f4ea}input[type=checkbox]{width:auto;transform:scale(1.12);margin-inline-end:8px}label{display:block;margin:11px 0}.check{display:flex;align-items:center;gap:5px}.note{border:1px solid #57461f;background:#19150c;padding:12px;border-radius:10px;color:#d8caa9}.ok{color:#7ed99b}.warn{color:#f3cc74}.danger{color:#ff9d9d}small{color:#bfb8a9}a{color:#edc66b}#status{padding:10px 0;color:#f3cc74}.categorybox{max-height:300px;overflow:auto;border:1px solid #393226;border-radius:10px;padding:10px;background:#101010}.category{display:flex;align-items:flex-start;gap:8px;padding:7px;border-bottom:1px solid #29251d}.category:last-child{border-bottom:0}.category input{margin-top:5px}.muted{opacity:.6}[hidden]{display:none!important}@media(max-width:760px){.grid{grid-template-columns:1fr}main{padding:12px}}:focus-visible{outline:3px solid #e4b344;outline-offset:2px}
+</style>
+</head>
+<body>
+<header><small>MONAGY · DESIGN LIBRARY</small><h1>إدارة الربح والميزات المميزة</h1><p>تحكم في Daily Treasure وRandom Library وإعدادات AdMob عن بُعد بدون تغيير كتالوج المكتبة.</p></header>
+<main>
+<section>
+  <div class="actions">
+    <button id="load">تحميل الإعدادات المنشورة</button>
+    <button id="export">تنزيل التحديث للنشر</button>
+    <button id="draft">حفظ مسودة</button>
+    <button id="restore">استعادة المسودة</button>
+    <a href="admin.html">العودة إلى لوحة المكتبة</a>
+  </div>
+  <div id="status" role="status">الإعلانات الحقيقية معطلة افتراضيًا حتى إدخال معرفات AdMob وتجهيز نسخة التطبيق.</div>
+  <div class="note">هذه الصفحة لا تضع إعلانات داخل المتصفح. هي تحفظ إعدادات يتحكم بها التطبيق. <b>Google Ads App ID</b> يجب أيضًا إدخاله داخل مشروع Kodular عند بناء التطبيق، وTest Mode يُضبط داخل المشروع أثناء الاختبار.</div>
+</section>
+
+<section>
+<h2>🎁 كنز التصميم اليومي</h2>
+<label class="check"><input id="treasureEnabled" type="checkbox"> تفعيل Unlock Today’s Design Treasure</label>
+<div class="grid">
+<label>العنوان بالعربية<input id="titleAr"></label>
+<label>English title<input id="titleEn" dir="ltr"></label>
+<label>الوصف بالعربية<textarea id="subtitleAr"></textarea></label>
+<label>English subtitle<textarea id="subtitleEn" dir="ltr"></textarea></label>
+</div>
+<div class="grid">
+<label>مصدر الكنوز<select id="poolMode"><option value="allEnabled">كل الأقسام المفعلة</option><option value="selected">أقسام أحددها أنا</option></select></label>
+<label>أقصى مرات فتح كنز بإعلان للمستخدم يوميًا<input id="maxRewarded" type="number" min="1" max="20"></label>
+</div>
+<div id="selectedWrap" hidden>
+  <label>بحث في الأقسام<input id="categorySearch" placeholder="بحث بالعربية أو الإنجليزية"></label>
+  <div id="categoryList" class="categorybox"></div>
+</div>
+</section>
+
+<section>
+<h2>🎲 الاستكشاف</h2>
+<label class="check"><input id="randomEnabled" type="checkbox"> تفعيل Random Library المجانية</label>
+<label class="check"><input id="avoidRepeat" type="checkbox"> تجنب تكرار نفس المكتبة مرتين متتاليتين</label>
+<label class="check"><input id="smartRandom" type="checkbox"> تفعيل Smart Random <small>— مهيأ كميزة Rewarded اختيارية</small></label>
+</section>
+
+<section>
+<h2>💰 AdMob</h2>
+<label class="check"><input id="adsEnabled" type="checkbox"> تفعيل الإعلانات الحقيقية</label>
+<label>AdMob App ID <small>(مرجع هنا + يجب إدخاله أيضًا في إعدادات مشروع Kodular)</small><input id="appId" dir="ltr" placeholder="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"></label>
+<div class="grid">
+<div>
+<h3>Banner</h3>
+<label class="check"><input id="bannerEnabled" type="checkbox"> تفعيل Banner</label>
+<label>Banner Ad Unit ID<input id="bannerId" dir="ltr" placeholder="ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy"></label>
+</div>
+<div>
+<h3>Rewarded</h3>
+<label class="check"><input id="rewardedEnabled" type="checkbox"> تفعيل Rewarded</label>
+<label>Rewarded Ad Unit ID<input id="rewardedId" dir="ltr" placeholder="ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy"></label>
+</div>
+</div>
+<div class="grid">
+<div>
+<h3>Interstitial</h3>
+<label class="check"><input id="interstitialEnabled" type="checkbox"> تفعيل Interstitial</label>
+<label>Interstitial Ad Unit ID<input id="interstitialId" dir="ltr" placeholder="ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy"></label>
+</div>
+<div>
+<h3>حدود العرض</h3>
+<label>إعلان بعد كل عدد تنقلات<input id="everyNav" type="number" min="3" max="30"></label>
+<label>الحد اليومي لكل مستخدم<input id="dailyCap" type="number" min="1" max="20"></label>
+</div>
+</div>
+<p class="note">الإعداد الافتراضي المقترح: Interstitial كل 6 تنقلات وبحد أقصى 4 يوميًا. الـRewarded يظهر فقط عندما يختاره المستخدم لفتح ميزة إضافية.</p>
+</section>
+
+<section>
+<h2>طريقة النشر</h2>
+<ol>
+<li>اضغط «تنزيل التحديث للنشر».</li>
+<li>استبدل ملف <code>monetization-config.json</code> داخل مستودع <code>designlibrary</code>.</li>
+<li>Commit ثم Push.</li>
+<li>سيقرأ التطبيق الإعدادات المنشورة بعد تجهيز نسخة AdMob.</li>
+</ol>
+</section>
+</main>
+<script>
+const DEFAULT_CONFIG={schemaVersion:1,revision:1,features:{randomLibrary:{enabled:true,avoidImmediateRepeat:true},dailyTreasure:{enabled:true,requiresRewarded:true,title:{ar:'افتح كنز التصميم اليومي',en:'Unlock Today’s Design Treasure'},subtitle:{ar:'شاهد إعلانًا قصيرًا لفتح مورد اليوم المميز.',en:'Watch a short ad to unlock today’s featured resource.'},poolMode:'allEnabled',categoryIndexes:[],maxRewardedUnlocksPerDay:5},smartRandom:{enabled:false,requiresRewarded:true}},ads:{enabled:false,appId:'',banner:{enabled:true,adUnitId:''},interstitial:{enabled:true,adUnitId:'',everyNavigations:6,dailyCap:4},rewarded:{enabled:true,adUnitId:''}}};
+let config=structuredClone(DEFAULT_CONFIG),categories=[],dirty=false;
+const $=id=>document.getElementById(id);const status=t=>$('status').textContent=t;
+const unitPattern=/^ca-app-pub-\d+\/\d+$/;const appPattern=/^ca-app-pub-\d+~\d+$/;
+function valid(c){
+ if(c.schemaVersion!==1)throw Error('إصدار إعدادات غير مدعوم');
+ if(!c.features?.dailyTreasure||!c.features?.randomLibrary||!c.ads)throw Error('بنية الإعدادات ناقصة');
+ const d=c.features.dailyTreasure;if(!d.title?.ar?.trim()||!d.title?.en?.trim())throw Error('اكتب عنوان كنز اليوم بالعربية والإنجليزية');
+ if(!['allEnabled','selected'].includes(d.poolMode))throw Error('اختيار مصدر الكنوز غير صالح');
+ if(d.poolMode==='selected'&&(!Array.isArray(d.categoryIndexes)||!d.categoryIndexes.length))throw Error('اختر قسمًا واحدًا على الأقل للكنوز');
+ const a=c.ads;if(a.appId&&!appPattern.test(a.appId))throw Error('AdMob App ID غير صحيح');
+ for(const x of [a.banner?.adUnitId,a.interstitial?.adUnitId,a.rewarded?.adUnitId])if(x&&!unitPattern.test(x))throw Error('أحد Ad Unit IDs غير صحيح');
+ if(a.enabled&&(!a.appId||!a.banner?.adUnitId||!a.interstitial?.adUnitId||!a.rewarded?.adUnitId))throw Error('عند تفعيل الإعلانات الحقيقية أدخل App ID وBanner وInterstitial وRewarded IDs');
+ return c;
+}
+function read(){
+ const picked=[...document.querySelectorAll('.catcheck:checked')].map(x=>Number(x.value));
+ config={schemaVersion:1,revision:Number(config.revision||0),features:{randomLibrary:{enabled:$('randomEnabled').checked,avoidImmediateRepeat:$('avoidRepeat').checked},dailyTreasure:{enabled:$('treasureEnabled').checked,requiresRewarded:true,title:{ar:$('titleAr').value.trim(),en:$('titleEn').value.trim()},subtitle:{ar:$('subtitleAr').value.trim(),en:$('subtitleEn').value.trim()},poolMode:$('poolMode').value,categoryIndexes:picked,maxRewardedUnlocksPerDay:Number($('maxRewarded').value||5)},smartRandom:{enabled:$('smartRandom').checked,requiresRewarded:true}},ads:{enabled:$('adsEnabled').checked,appId:$('appId').value.trim(),banner:{enabled:$('bannerEnabled').checked,adUnitId:$('bannerId').value.trim()},interstitial:{enabled:$('interstitialEnabled').checked,adUnitId:$('interstitialId').value.trim(),everyNavigations:Number($('everyNav').value||6),dailyCap:Number($('dailyCap').value||4)},rewarded:{enabled:$('rewardedEnabled').checked,adUnitId:$('rewardedId').value.trim()}}};
+ valid(config);return config;
+}
+function fill(){const d=config.features.dailyTreasure,r=config.features.randomLibrary,a=config.ads;$('treasureEnabled').checked=d.enabled!==false;$('titleAr').value=d.title?.ar||'';$('titleEn').value=d.title?.en||'';$('subtitleAr').value=d.subtitle?.ar||'';$('subtitleEn').value=d.subtitle?.en||'';$('poolMode').value=d.poolMode||'allEnabled';$('maxRewarded').value=d.maxRewardedUnlocksPerDay||5;$('randomEnabled').checked=r.enabled!==false;$('avoidRepeat').checked=r.avoidImmediateRepeat!==false;$('smartRandom').checked=config.features.smartRandom?.enabled===true;$('adsEnabled').checked=a.enabled===true;$('appId').value=a.appId||'';$('bannerEnabled').checked=a.banner?.enabled!==false;$('bannerId').value=a.banner?.adUnitId||'';$('interstitialEnabled').checked=a.interstitial?.enabled!==false;$('interstitialId').value=a.interstitial?.adUnitId||'';$('everyNav').value=a.interstitial?.everyNavigations||6;$('dailyCap').value=a.interstitial?.dailyCap||4;$('rewardedEnabled').checked=a.rewarded?.enabled!==false;$('rewardedId').value=a.rewarded?.adUnitId||'';renderCategories();toggleSelected()}
+function toggleSelected(){$('selectedWrap').hidden=$('poolMode').value!=='selected'}
+function renderCategories(){const q=($('categorySearch').value||'').toLowerCase(),selected=new Set(config.features.dailyTreasure.categoryIndexes||[]);$('categoryList').replaceChildren();for(const c of categories.filter(x=>x.enabled!==false&&(x.ar+' '+x.en).toLowerCase().includes(q))){const lab=document.createElement('label');lab.className='category';const cb=document.createElement('input');cb.type='checkbox';cb.className='catcheck';cb.value=c.index;cb.checked=selected.has(c.index);const span=document.createElement('span');span.textContent=c.ar+' · '+c.en;lab.append(cb,span);$('categoryList').append(lab)}if(!categories.length)$('categoryList').textContent='حمّل الإعدادات المنشورة لعرض الأقسام.'}
+async function loadCategories(){try{const r=await fetch('app-config.json?t='+Date.now(),{cache:'no-store'});if(r.ok){const x=await r.json();categories=Array.isArray(x.categories)?x.categories:[];renderCategories()}}catch(e){}}
+$('load').onclick=async()=>{try{const [r]=await Promise.all([fetch('monetization-config.json?t='+Date.now(),{cache:'no-store'}),loadCategories()]);if(!r.ok)throw Error('تعذر تحميل إعدادات الربح');config=valid(await r.json());fill();dirty=false;status('تم تحميل إعدادات الربح المنشورة.')}catch(e){status(e.message)}};
+$('export').onclick=()=>{try{read();config.revision=Number(config.revision||0)+1;const blob=new Blob([JSON.stringify(config,null,2)],{type:'application/json'}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='monetization-config.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);dirty=false;status('تم تنزيل monetization-config.json للنشر.')}catch(e){status(e.message)}};
+$('draft').onclick=()=>{try{read();localStorage.setItem('dl-monetization-draft',JSON.stringify(config));dirty=false;status('تم حفظ المسودة على هذا المتصفح.')}catch(e){status(e.message)}};
+$('restore').onclick=()=>{try{const s=localStorage.getItem('dl-monetization-draft');if(!s)throw Error('لا توجد مسودة محفوظة');config=valid(JSON.parse(s));fill();dirty=false;status('تمت استعادة المسودة.')}catch(e){status(e.message)}};
+$('poolMode').onchange=()=>{toggleSelected();dirty=true};$('categorySearch').oninput=renderCategories;document.addEventListener('input',e=>{if(e.target.id!=='categorySearch')dirty=true});window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});loadCategories();fill();
+</script>
+</body></html>
