@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
-  "enabled": false,
+  "revision": 3,
+  "enabled": true,
   "firebase": {
-    "appId": "",
+    "appId": "1:654323465719:android:fa170b4fb4fe99f33482f2",
     "debugAppId": "",
-    "apiKey": "",
-    "projectId": "",
-    "senderId": ""
+    "apiKey": "AIzaSyA4sUQhxedRoolJ-f--gg8gHpplqH9V8fM",
+    "projectId": "designlibrary-47a13",
+    "senderId": "654323465719"
   },
   "workerUrl": "",
   "defaultTopic": "all"
