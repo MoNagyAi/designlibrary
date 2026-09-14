@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 4,
+  "revision": 5,
   "features": {
     "randomLibrary": {"enabled": true, "avoidRepeatUntilPoolExhausted": true},
     "dailyTreasure": {"enabled": true, "requiresRewarded": true, "poolMode": "allEnabled", "categoryIndexes": [], "maxRewardedUnlocksPerDay": 50, "avoidRepeatUntilPoolExhausted": true}
@@ -9,7 +9,13 @@
     "enabled": false,
     "banner": {"enabled": true},
     "interstitial": {"enabled": true, "everyNavigations": 4, "dailyCap": 0},
-    "downloadInterstitial": {"enabled": true, "everyDownloads": 2, "showNotice": true},
+    "actionInterstitial": {
+      "enabled": true,
+      "everyActions": 2,
+      "minSecondsBetweenAds": 30,
+      "showNotice": true,
+      "actions": ["view", "download", "copy"]
+    },
     "rewarded": {"enabled": true}
   }
 }
