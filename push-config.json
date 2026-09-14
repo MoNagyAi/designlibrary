@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
+  "revision": 4,
   "enabled": true,
   "firebase": {
     "appId": "1:654323465719:android:fa170b4fb4fe99f33482f2",
-    "debugAppId": "",
+    "debugAppId": "1:654323465719:android:942e9810af4d44bd3482f2",
     "apiKey": "AIzaSyA4sUQhxedRoolJ-f--gg8gHpplqH9V8fM",
     "projectId": "designlibrary-47a13",
     "senderId": "654323465719"
