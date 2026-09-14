@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "revision": 1,
   "enabled": true,
-  "image": "assets/header.webp",
+  "image": "https://github.com/MoNagyAi/designlibrary/blob/main/assets/header.webp",
   "heightDp": 116,
   "scaleType": "centerCrop"
 }
