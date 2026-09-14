@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 5,
+  "revision": 6,
   "features": {
     "randomLibrary": {"enabled": true, "avoidRepeatUntilPoolExhausted": true},
     "dailyTreasure": {"enabled": true, "requiresRewarded": true, "poolMode": "allEnabled", "categoryIndexes": [], "maxRewardedUnlocksPerDay": 50, "avoidRepeatUntilPoolExhausted": true}
@@ -14,7 +14,7 @@
       "everyActions": 2,
       "minSecondsBetweenAds": 30,
       "showNotice": true,
-      "actions": ["view", "download", "copy"]
+      "actions": ["view", "download", "copy", "share"]
     },
     "rewarded": {"enabled": true}
   }
