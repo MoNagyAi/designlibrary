@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
+  "revision": 2,
   "enabled": true,
   "title": {
     "ar": "مركز الإبداع بالذكاء الاصطناعي",
     "en": "AI Creative Hub"
   },
   "subtitle": {
-    "ar": "أدوات ومسارات عمل وبرومبتات مجانية للمبدعين",
-    "en": "Free tools, workflows and prompts for creators"
+    "ar": "جميع الأقسام والأدوات والمسارات والبرومبتات مجانية",
+    "en": "All sections, tools, workflows and prompts are free"
   },
   "comingSoonMessage": {
     "ar": "قريبًا — نعمل على تجهيز هذا القسم وإضافة محتوى مجاني مميز.",
@@ -29,8 +29,8 @@
     "en": "AI Creative Hub",
     "page": "ai-hub.html",
     "icon": "AI",
-    "badgeAr": "مجاني",
-    "badgeEn": "FREE",
+    "badgeAr": "مجاني بالكامل",
+    "badgeEn": "100% FREE",
     "thumbnails": []
   },
   "items": [
@@ -178,13 +178,13 @@
       "free": true
     },
     {
-      "id": "free-ai-tools",
+      "id": "ai-tools-apps",
       "order": 12,
       "icon": "🆓",
-      "ar": "أدوات وتطبيقات ذكاء اصطناعي مجانية",
-      "en": "Free AI Tools & Apps",
-      "descriptionAr": "تطبيقات ومواقع مجانية مختارة تساعد المصممين وصناع المحتوى.",
-      "descriptionEn": "Curated free apps and websites for designers and creators.",
+      "ar": "أدوات وتطبيقات الذكاء الاصطناعي",
+      "en": "AI Tools & Apps",
+      "descriptionAr": "تطبيقات ومواقع مختارة تساعد المصممين وصناع المحتوى.",
+      "descriptionEn": "Curated apps and websites for designers and creators.",
       "status": "comingSoon",
       "url": "",
       "enabled": true,
