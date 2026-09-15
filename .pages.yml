@@ -297,6 +297,9 @@ content:
   - name: proxyUrl
     label: رابط Worker الآمن — بدون مفاتيح
     type: string
+  - name: analyticsEnabled
+    label: تفعيل الإحصائيات العالمية في Airtable
+    type: boolean
   - name: title
     label: عنوان مكتبة الكتب
     type: object

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "proxyUrl": "",
+  "proxyUrl": "https://designlibrary-books-api.profmohamedfat7i.workers.dev",
   "title": {
     "ar": "مكتبة الكتب والمراجع",
     "en": "Books & References"
@@ -355,5 +355,6 @@
       "image": "",
       "items": []
     }
-  ]
+  ],
+  "analyticsEnabled": true
 }
