@@ -133,6 +133,165 @@ content:
                 - name: fitCenter
                   label: "إظهار الصورة كاملة"
 
+  - name: ai
+    label: "الذكاء الاصطناعي — مجاني"
+    type: group
+    items:
+      - name: ai_config
+        label: "AI Creative Hub"
+        type: file
+        path: ai-config.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: schemaVersion
+            label: "Schema Version"
+            type: number
+            readonly: true
+          - name: revision
+            label: "Revision"
+            type: number
+            description: "زوده عند عمل تغيير كبير في القسم."
+          - name: enabled
+            label: "إظهار قسم الذكاء الاصطناعي"
+            type: boolean
+          - name: title
+            label: "عنوان القسم"
+            type: object
+            fields:
+              - name: ar
+                label: "العنوان بالعربية"
+                type: string
+              - name: en
+                label: "English title"
+                type: string
+          - name: subtitle
+            label: "الوصف الرئيسي"
+            type: object
+            fields:
+              - name: ar
+                label: "الوصف بالعربية"
+                type: text
+              - name: en
+                label: "English description"
+                type: text
+          - name: comingSoonMessage
+            label: "رسالة قريبًا"
+            type: object
+            fields:
+              - name: ar
+                label: "الرسالة بالعربية"
+                type: text
+              - name: en
+                label: "English message"
+                type: text
+          - name: freeLabel
+            label: "وسم مجاني"
+            type: object
+            fields:
+              - name: ar
+                label: "بالعربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
+          - name: comingSoonLabel
+            label: "وسم قريبًا"
+            type: object
+            fields:
+              - name: ar
+                label: "بالعربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
+          - name: homeCard
+            label: "كارت AI في الصفحة الرئيسية"
+            type: object
+            fields:
+              - name: enabled
+                label: "إظهار الكارت"
+                type: boolean
+              - name: index
+                label: "الترتيب / الرقم"
+                type: number
+              - name: ar
+                label: "اسم الكارت بالعربية"
+                type: string
+              - name: en
+                label: "English card name"
+                type: string
+              - name: page
+                label: "صفحة القسم"
+                type: string
+              - name: icon
+                label: "الأيقونة / النص القصير"
+                type: string
+              - name: badgeAr
+                label: "شارة الكارت بالعربية"
+                type: string
+              - name: badgeEn
+                label: "Card badge English"
+                type: string
+              - name: thumbnails
+                label: "صور معاينة الكارت"
+                type: string
+                list: true
+          - name: items
+            label: "أقسام وأدوات AI"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{order} · {ar} · {en}"
+            fields:
+              - name: id
+                label: "ID"
+                type: string
+                required: true
+              - name: order
+                label: "الترتيب"
+                type: number
+              - name: icon
+                label: "الأيقونة"
+                type: string
+              - name: ar
+                label: "الاسم بالعربية"
+                type: string
+                required: true
+              - name: en
+                label: "English name"
+                type: string
+                required: true
+              - name: descriptionAr
+                label: "الوصف بالعربية"
+                type: text
+              - name: descriptionEn
+                label: "English description"
+                type: text
+              - name: status
+                label: "الحالة"
+                type: select
+                options:
+                  values:
+                    - name: comingSoon
+                      label: "قريبًا"
+                    - name: live
+                      label: "متاح الآن"
+              - name: url
+                label: "الرابط عند التفعيل"
+                type: string
+                description: "اتركه فارغًا أثناء حالة قريبًا. عند التحويل إلى متاح ضع رابط HTTPS أو اسم صفحة داخلية."
+              - name: enabled
+                label: "إظهار العنصر"
+                type: boolean
+              - name: free
+                label: "مجاني"
+                type: boolean
+
   - name: features
     label: "الميزات والإعلانات"
     type: group
