@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "enabled": true,
+  "brand": {
+    "ar": "مكتبة التصميم",
+    "en": "Design Library"
+  },
+  "title": {
+    "ar": "كل ما يحتاجه المبدع في مكان واحد",
+    "en": "Everything a creator needs in one place"
+  },
+  "subtitle": {
+    "ar": "جرافيك، كتب، ذكاء اصطناعي والمزيد — جميع المحتويات مجانية.",
+    "en": "Graphics, books, AI and more — all content is free."
+  },
+  "freeLabel": {
+    "ar": "مجاني بالكامل",
+    "en": "100% FREE"
+  },
+  "comingSoonMessage": {
+    "ar": "قريبًا — نعمل على تجهيز هذا القسم وإضافة محتوى مجاني جديد.",
+    "en": "Coming soon — we're preparing this section with new free content."
+  },
+  "sections": [
+    {
+      "id": "graphics",
+      "order": 1,
+      "icon": "🎨",
+      "ar": "جرافيك",
+      "en": "Graphics",
+      "descriptionAr": "قوالب، ملفات تصميم، موكاب، شعارات وموارد جرافيك مجانية.",
+      "descriptionEn": "Free templates, design files, mockups, logos and graphic resources.",
+      "status": "live",
+      "url": "section.html?section=graphics",
+      "enabled": true
+    },
+    {
+      "id": "courses",
+      "order": 2,
+      "icon": "🎓",
+      "ar": "كورسات",
+      "en": "Courses",
+      "descriptionAr": "كورسات ودروس مختارة في التصميم والإبداع والتقنية.",
+      "descriptionEn": "Curated courses and tutorials in design, creativity and technology.",
+      "status": "comingSoon",
+      "url": "section.html?section=courses",
+      "enabled": true
+    },
+    {
+      "id": "marketing",
+      "order": 3,
+      "icon": "📣",
+      "ar": "تسويق",
+      "en": "Marketing",
+      "descriptionAr": "مصادر وأدوات وقوالب تساعد في التسويق وصناعة المحتوى.",
+      "descriptionEn": "Free resources, tools and templates for marketing and content creation.",
+      "status": "comingSoon",
+      "url": "section.html?section=marketing",
+      "enabled": true
+    },
+    {
+      "id": "programs",
+      "order": 4,
+      "icon": "💻",
+      "ar": "برامج",
+      "en": "Software",
+      "descriptionAr": "برامج وأدوات مجانية ومصادر مفيدة للمصممين والمبدعين.",
+      "descriptionEn": "Free software, tools and useful resources for designers and creators.",
+      "status": "comingSoon",
+      "url": "section.html?section=programs",
+      "enabled": true
+    },
+    {
+      "id": "three-d",
+      "order": 5,
+      "icon": "🧊",
+      "ar": "ثري دي",
+      "en": "3D",
+      "descriptionAr": "موديلات وخامات وملفات وموارد ثلاثية الأبعاد مجانية.",
+      "descriptionEn": "Free 3D models, materials, files and resources.",
+      "status": "comingSoon",
+      "url": "section.html?section=three-d",
+      "enabled": true
+    },
+    {
+      "id": "books",
+      "order": 6,
+      "icon": "📚",
+      "ar": "كتب",
+      "en": "Books",
+      "descriptionAr": "كتب ومراجع مجانية في التصميم والفن والإبداع والتقنية.",
+      "descriptionEn": "Free books and references in design, art, creativity and technology.",
+      "status": "live",
+      "url": "section.html?section=books",
+      "enabled": true
+    },
+    {
+      "id": "ai",
+      "order": 7,
+      "icon": "✨",
+      "ar": "الذكاء الاصطناعي",
+      "en": "AI",
+      "descriptionAr": "مسارات عمل، برومبتات، أدوات وتطبيقات ذكاء اصطناعي مجانية.",
+      "descriptionEn": "Free AI workflows, prompts, tools and apps.",
+      "status": "live",
+      "url": "section.html?section=ai",
+      "enabled": true
+    },
+    {
+      "id": "other",
+      "order": 8,
+      "icon": "🧰",
+      "ar": "أخرى",
+      "en": "Other",
+      "descriptionAr": "مصادر إضافية متنوعة سيتم إضافتها تباعًا.",
+      "descriptionEn": "More free resources and useful collections coming over time.",
+      "status": "comingSoon",
+      "url": "section.html?section=other",
+      "enabled": true
+    }
+  ]
+}
