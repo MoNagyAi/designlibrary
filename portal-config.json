@@ -37,19 +37,6 @@
       "target": "web"
     },
     {
-      "id": "books",
-      "order": 6,
-      "icon": "📚",
-      "ar": "كتب",
-      "en": "Books",
-      "descriptionAr": "كتب ومراجع مجانية في التصميم والفن والإبداع والتقنية.",
-      "descriptionEn": "Free books and references in design, art, creativity and technology.",
-      "status": "live",
-      "url": "section.html?section=books",
-      "enabled": true,
-      "target": "books"
-    },
-    {
       "id": "ai",
       "order": 7,
       "icon": "✨",
@@ -61,6 +48,19 @@
       "url": "ai-hub.html",
       "enabled": true,
       "target": "web"
+    },
+    {
+      "id": "books",
+      "order": 6,
+      "icon": "📚",
+      "ar": "كتب",
+      "en": "Books",
+      "descriptionAr": "كتب ومراجع مجانية في التصميم والفن والإبداع والتقنية.",
+      "descriptionEn": "Free books and references in design, art, creativity and technology.",
+      "status": "live",
+      "url": "section.html?section=books",
+      "enabled": true,
+      "target": "books"
     },
     {
       "id": "courses",
