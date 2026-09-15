@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "enabled": true,
+  "title": {
+    "ar": "تصنيفات الجرافيك",
+    "en": "Graphic Categories"
+  },
+  "subtitle": {
+    "ar": "اختر تصنيفًا لعرض مجموعاته",
+    "en": "Choose a graphic category"
+  },
+  "showViews": true,
+  "categories": [
+    {"key":"business","order":1,"icon":"💳","ar":"كروت شخصية","en":"Business Cards","pattern":"كروت شخصيه|كروت شخصية|business card|visiting card","enabled":true},
+    {"key":"flyers","order":2,"icon":"📄","ar":"فلايرز وبروشورات","en":"Flyers & Brochures","pattern":"فلاير|flyer|بروشور|brochure","enabled":true},
+    {"key":"mockups","order":3,"icon":"🖼️","ar":"موكاب","en":"Mockups","pattern":"موك|mockup|mock up","enabled":true},
+    {"key":"logos","order":4,"icon":"✦","ar":"لوجو وهوية","en":"Logos & Branding","pattern":"لوجو|شعار|logo|branding|هويات|هويه|هوية","enabled":true},
+    {"key":"social","order":5,"icon":"📱","ar":"سوشيال ميديا","en":"Social Media","pattern":"سوشيال|social|instagram|انستغرام|facebook|فيسبوك","enabled":true},
+    {"key":"fonts","order":6,"icon":"Aa","ar":"خطوط","en":"Fonts","pattern":"خطوط|font|fonts","enabled":true},
+    {"key":"psd","order":7,"icon":"Ps","ar":"فوتوشوب و PSD","en":"Photoshop & PSD","pattern":"photoshop|فوتوشوب|psd","enabled":true},
+    {"key":"vector","order":8,"icon":"Ai","ar":"Illustrator و Vector","en":"Illustrator & Vector","pattern":"illustrator|اليستريتور|فيكتور|vector|eps|svg","enabled":true},
+    {"key":"motion","order":9,"icon":"▶","ar":"فيديو وموشن","en":"Video & Motion","pattern":"after effects|aftereffects|افترافكت|موشن|motion|premiere|بريمير|video|فيديو|vfx","enabled":true},
+    {"key":"print","order":10,"icon":"▣","ar":"بنرات ومطبوعات","en":"Banners & Print","pattern":"بنر|banner|roll up|رول اب|يفط|طباع|print","enabled":true}
+  ]
+}
