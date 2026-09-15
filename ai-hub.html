@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مركز الإبداع بالذكاء الاصطناعي</title>
+<style>
+:root{color-scheme:dark;--bg:#020d18;--panel:#0b1d2d;--panel2:#11142a;--gold:#e7ae2d;--violet:#7a5cff;--text:#f8f8f6;--muted:#b1becb;--green:#00a39f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% -10%,#6548dd33,transparent 30%),var(--bg);color:var(--text);font-family:Arial,Tahoma,sans-serif;min-height:100vh}
+.wrap{max-width:1040px;margin:auto;padding:18px 14px 34px}.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#15112a 0%,#081827 65%,#0b1d2d 100%);border:1px solid #8c63ff66;border-radius:24px;padding:22px 18px;margin-bottom:18px;box-shadow:0 18px 45px #0006}.hero:after{content:"AI";position:absolute;inset-inline-end:-8px;top:-30px;font:900 116px/1 Arial;color:#ffffff09}.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid #d9c8ff55;background:#6d4cff26;color:#d9c8ff;border-radius:999px;padding:7px 11px;font-size:11px;font-weight:800;letter-spacing:.6px}.hero h1{margin:14px 0 7px;font-size:25px;line-height:1.45}.hero p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tile{position:relative;width:100%;text-align:start;border:1px solid #34495d;background:linear-gradient(180deg,#102235,#07131f);border-radius:18px;padding:15px 13px;min-height:178px;color:inherit;font:inherit;cursor:pointer;box-shadow:0 9px 20px #0004}.tile:active{transform:scale(.985)}.tile .icon{width:42px;height:42px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:21px;background:#6d4cff20;border:1px solid #8c63ff55;margin-bottom:12px}.tile h2{font-size:14px;line-height:1.55;margin:0 0 6px}.tile p{font-size:11px;line-height:1.65;color:var(--muted);margin:0 0 38px}.badges{position:absolute;inset-inline-start:12px;inset-inline-end:12px;bottom:11px;display:flex;gap:6px;flex-wrap:wrap}.badge{border-radius:999px;padding:5px 8px;font-size:9px;font-weight:800;letter-spacing:.35px}.free{background:#003c3b;border:1px solid #00a39f88;color:#6ff0eb}.soon{background:#392d12;border:1px solid #e7ae2d77;color:#f1c55d}.live{background:#123b24;border:1px solid #36b56c77;color:#77eaa6}.empty{text-align:center;color:var(--muted);padding:50px 10px}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:22px;z-index:999}.modal.show{display:flex}.dialog{width:min(420px,100%);background:#0d1b29;border:1px solid #8c63ff88;border-radius:20px;padding:22px;box-shadow:0 24px 80px #0009;text-align:center}.dialog .big{font-size:38px;margin-bottom:8px}.dialog h3{margin:0 0 9px;font-size:19px}.dialog p{color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 16px}.dialog button{border:0;border-radius:12px;background:linear-gradient(180deg,#f4c84f,#dba427);color:#171208;font-weight:800;font-size:13px;padding:12px 22px;min-width:120px}.error{border:1px solid #a33;background:#321616;color:#ffd9d9;border-radius:14px;padding:14px;font-size:12px;line-height:1.7}@media(min-width:720px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h1{font-size:31px}.tile{min-height:190px}.tile h2{font-size:15px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <span id="freeTop" class="eyebrow">✨ مجاني 100%</span>
+    <h1 id="title">مركز الإبداع بالذكاء الاصطناعي</h1>
+    <p id="subtitle">أدوات ومسارات عمل وبرومبتات مجانية للمبدعين</p>
+  </section>
+  <main id="grid" class="grid" aria-live="polite"></main>
+  <div id="error" class="error" hidden></div>
+</div>
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="dialog">
+    <div class="big">🚀</div>
+    <h3 id="modalTitle">قريبًا</h3>
+    <p id="modalText"></p>
+    <button id="closeModal" type="button">حسنًا</button>
+  </div>
+</div>
+<script>
+(function(){
+const CONFIG='ai-config.json';
+const lang=(window.__dlLang||localStorage.getItem('dl-language')||document.documentElement.lang||'ar').toLowerCase().startsWith('en')?'en':'ar';
+document.documentElement.lang=lang;document.documentElement.dir=lang==='en'?'ltr':'rtl';
+document.body.dir=document.documentElement.dir;
+const $=id=>document.getElementById(id);
+const tr=(obj,fallback='')=>obj&&typeof obj==='object'?(obj[lang]||obj.ar||obj.en||fallback):fallback;
+function safeUrl(raw){try{return new URL(raw,location.href)}catch(e){return null}}
+function openItem(item,cfg){
+  if(item.status!=='live'||!item.url){
+    $('modalTitle').textContent=lang==='en'?'Coming Soon':'قريبًا';
+    $('modalText').textContent=tr(cfg.comingSoonMessage,lang==='en'?'Coming soon.':'قريبًا.');
+    $('closeModal').textContent=lang==='en'?'OK':'حسنًا';
+    $('modal').classList.add('show');return;
+  }
+  const u=safeUrl(item.url);if(!u)return;
+  if(u.origin===location.origin) location.href=u.href; else window.open(u.href,'_blank','noopener');
+}
+function render(cfg){
+  $('title').textContent=tr(cfg.title,lang==='en'?'AI Creative Hub':'مركز الإبداع بالذكاء الاصطناعي');
+  $('subtitle').textContent=tr(cfg.subtitle,'');
+  $('freeTop').textContent='✨ '+tr(cfg.freeLabel,lang==='en'?'FREE':'مجاني')+' 100%';
+  document.title=$('title').textContent;
+  const freeLabel=tr(cfg.freeLabel,lang==='en'?'FREE':'مجاني');
+  const soonLabel=tr(cfg.comingSoonLabel,lang==='en'?'COMING SOON':'قريبًا');
+  const items=(cfg.items||[]).filter(x=>x&&x.enabled!==false).sort((a,b)=>(a.order||999)-(b.order||999));
+  const grid=$('grid');grid.replaceChildren();
+  if(!items.length){const e=document.createElement('div');e.className='empty';e.textContent=lang==='en'?'No sections are available yet.':'لا توجد أقسام متاحة حاليًا.';grid.append(e);return;}
+  items.forEach(item=>{
+    const b=document.createElement('button');b.type='button';b.className='tile';
+    const icon=document.createElement('div');icon.className='icon';icon.textContent=item.icon||'✨';
+    const h=document.createElement('h2');h.textContent=lang==='en'?item.en:item.ar;
+    const p=document.createElement('p');p.textContent=lang==='en'?(item.descriptionEn||''):(item.descriptionAr||'');
+    const badges=document.createElement('div');badges.className='badges';
+    if(item.free!==false){const f=document.createElement('span');f.className='badge free';f.textContent=freeLabel;badges.append(f);}
+    const st=document.createElement('span');st.className='badge '+(item.status==='live'?'live':'soon');st.textContent=item.status==='live'?(lang==='en'?'OPEN':'متاح'):soonLabel;badges.append(st);
+    b.append(icon,h,p,badges);b.addEventListener('click',()=>openItem(item,cfg));grid.append(b);
+  });
+}
+$('closeModal').addEventListener('click',()=>$('modal').classList.remove('show'));
+$('modal').addEventListener('click',e=>{if(e.target===$('modal'))$('modal').classList.remove('show')});
+fetch(CONFIG+'?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(cfg=>{if(!cfg||cfg.enabled===false)throw Error('AI hub disabled');render(cfg)}).catch(err=>{$('error').hidden=false;$('error').textContent=lang==='en'?'AI section is temporarily unavailable.':'قسم الذكاء الاصطناعي غير متاح مؤقتًا.';});
+})();
+</script>
+</body>
+</html>
