@@ -16,87 +16,14 @@ settings:
       rename: "cms: rename {oldPath} -> {newPath}"
 
 content:
-  - name: app
-    label: "التطبيق والمكتبة"
+  - name: content_hub
+    label: "الأقسام الرئيسية والمحتوى المجاني"
     type: group
     items:
-      - name: app_config
-        label: "الأقسام والترجمة والتواصل"
+      - name: portal_config
+        label: "الأقسام الأساسية — الرئيسية"
         type: file
-        path: app-config.json
-        format: json
-        operations:
-          create: false
-          rename: false
-          delete: false
-        fields:
-          - name: schemaVersion
-            label: "Schema Version"
-            type: number
-            readonly: true
-          - name: revision
-            label: "Revision"
-            type: number
-            description: "يمكن زيادته عند عمل تحديث كبير."
-          - name: announcement
-            label: "رسالة التطبيق"
-            type: object
-            fields:
-              - name: ar
-                label: "الرسالة بالعربية"
-                type: text
-              - name: en
-                label: "English message"
-                type: text
-          - name: social
-            label: "روابط التواصل"
-            type: object
-            fields:
-              - name: facebook
-                label: "Facebook"
-                type: string
-              - name: youtube
-                label: "YouTube"
-                type: string
-              - name: whatsapp
-                label: "WhatsApp"
-                type: string
-                description: "مثال: https://wa.me/201xxxxxxxxx"
-          - name: categories
-            label: "أقسام المكتبة"
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{ar} · {en}"
-            fields:
-              - name: index
-                label: "الترتيب"
-                type: number
-              - name: ar
-                label: "الاسم بالعربية"
-                type: string
-                required: true
-              - name: en
-                label: "English name"
-                type: string
-                required: true
-              - name: page
-                label: "اسم الصفحة / الرابط"
-                type: string
-                required: true
-              - name: thumbnails
-                label: "صور المعاينة"
-                type: string
-                list: true
-              - name: enabled
-                label: "إظهار القسم"
-                type: boolean
-
-      - name: header_config
-        label: "الهيدر والهوية"
-        type: file
-        path: header-config.json
+        path: portal-config.json
         format: json
         operations:
           create: false
@@ -111,137 +38,60 @@ content:
             label: "Revision"
             type: number
           - name: enabled
-            label: "تفعيل الهيدر البعيد"
+            label: "تفعيل الصفحة الرئيسية"
             type: boolean
-          - name: image
-            label: "رابط صورة الهيدر"
-            type: string
-            description: "ضع رابط HTTPS مباشر للصورة. المقاس المقترح 1500×500."
-          - name: heightDp
-            label: "ارتفاع الهيدر"
-            type: number
-            options:
-              min: 70
-              max: 220
-          - name: scaleType
-            label: "طريقة عرض الصورة"
-            type: select
-            options:
-              values:
-                - name: centerCrop
-                  label: "ملء المساحة"
-                - name: fitCenter
-                  label: "إظهار الصورة كاملة"
-
-  - name: ai
-    label: "الذكاء الاصطناعي — مجاني"
-    type: group
-    items:
-      - name: ai_config
-        label: "AI Creative Hub"
-        type: file
-        path: ai-config.json
-        format: json
-        operations:
-          create: false
-          rename: false
-          delete: false
-        fields:
-          - name: schemaVersion
-            label: "Schema Version"
-            type: number
-            readonly: true
-          - name: revision
-            label: "Revision"
-            type: number
-            description: "زوده عند عمل تغيير كبير في القسم."
-          - name: enabled
-            label: "إظهار قسم الذكاء الاصطناعي"
-            type: boolean
+          - name: brand
+            label: "اسم التطبيق"
+            type: object
+            fields:
+              - name: ar
+                label: "بالعربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
           - name: title
-            label: "عنوان القسم"
+            label: "العنوان الرئيسي"
             type: object
             fields:
               - name: ar
-                label: "العنوان بالعربية"
+                label: "بالعربية"
                 type: string
               - name: en
-                label: "English title"
+                label: "English"
                 type: string
           - name: subtitle
             label: "الوصف الرئيسي"
             type: object
             fields:
               - name: ar
-                label: "الوصف بالعربية"
+                label: "بالعربية"
                 type: text
               - name: en
-                label: "English description"
+                label: "English"
                 type: text
+          - name: freeLabel
+            label: "شارة المجانية"
+            type: object
+            fields:
+              - name: ar
+                label: "بالعربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
           - name: comingSoonMessage
             label: "رسالة قريبًا"
             type: object
             fields:
               - name: ar
-                label: "الرسالة بالعربية"
+                label: "بالعربية"
                 type: text
               - name: en
-                label: "English message"
+                label: "English"
                 type: text
-          - name: freeLabel
-            label: "وسم مجاني"
-            type: object
-            fields:
-              - name: ar
-                label: "بالعربية"
-                type: string
-              - name: en
-                label: "English"
-                type: string
-          - name: comingSoonLabel
-            label: "وسم قريبًا"
-            type: object
-            fields:
-              - name: ar
-                label: "بالعربية"
-                type: string
-              - name: en
-                label: "English"
-                type: string
-          - name: homeCard
-            label: "كارت AI في الصفحة الرئيسية"
-            type: object
-            fields:
-              - name: enabled
-                label: "إظهار الكارت"
-                type: boolean
-              - name: index
-                label: "الترتيب / الرقم"
-                type: number
-              - name: ar
-                label: "اسم الكارت بالعربية"
-                type: string
-              - name: en
-                label: "English card name"
-                type: string
-              - name: page
-                label: "صفحة القسم"
-                type: string
-              - name: icon
-                label: "الأيقونة / النص القصير"
-                type: string
-              - name: badgeAr
-                label: "شارة الكارت بالعربية"
-                type: string
-              - name: badgeEn
-                label: "Card badge English"
-                type: string
-              - name: thumbnails
-                label: "صور معاينة الكارت"
-                type: string
-                list: true
-          - name: items
-            label: "أقسام وأدوات AI"
+          - name: sections
+            label: "الأقسام الأساسية"
             type: object
             list:
               collapsible:
@@ -249,7 +99,7 @@ content:
                 summary: "{order} · {ar} · {en}"
             fields:
               - name: id
-                label: "ID"
+                label: "ID — لا تغيّره"
                 type: string
                 required: true
               - name: order
@@ -277,16 +127,367 @@ content:
                 type: select
                 options:
                   values:
+                    - name: live
+                      label: "مفتوح"
+                    - name: comingSoon
+                      label: "قريبًا"
+              - name: url
+                label: "رابط القسم"
+                type: string
+              - name: enabled
+                label: "إظهار القسم"
+                type: boolean
+
+      - name: library_content
+        label: "إضافة المحتوى — كل الأقسام"
+        type: file
+        path: library-content.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: schemaVersion
+            label: "Schema Version"
+            type: number
+            readonly: true
+          - name: revision
+            label: "Revision"
+            type: number
+          - name: items
+            label: "المحتوى"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titleAr} · {section}"
+            fields:
+              - name: id
+                label: "ID فريد"
+                type: string
+                required: true
+              - name: section
+                label: "القسم"
+                type: select
+                required: true
+                options:
+                  values:
+                    - name: graphics
+                      label: "جرافيك"
+                    - name: courses
+                      label: "كورسات"
+                    - name: marketing
+                      label: "تسويق"
+                    - name: programs
+                      label: "برامج"
+                    - name: three-d
+                      label: "ثري دي"
+                    - name: books
+                      label: "كتب"
+                    - name: ai
+                      label: "AI"
+                    - name: other
+                      label: "أخرى"
+              - name: order
+                label: "الترتيب داخل القسم"
+                type: number
+              - name: titleAr
+                label: "العنوان بالعربية"
+                type: string
+                required: true
+              - name: titleEn
+                label: "English title"
+                type: string
+                required: true
+              - name: descriptionAr
+                label: "الوصف بالعربية"
+                type: text
+              - name: descriptionEn
+                label: "English description"
+                type: text
+              - name: image
+                label: "رابط صورة المعاينة HTTPS"
+                type: string
+              - name: url
+                label: "رابط الفتح / المشاهدة"
+                type: string
+              - name: downloadUrl
+                label: "رابط التحميل"
+                type: string
+              - name: badgeAr
+                label: "شارة بالعربية"
+                type: string
+              - name: badgeEn
+                label: "English badge"
+                type: string
+              - name: enabled
+                label: "إظهار المحتوى"
+                type: boolean
+
+  - name: graphics
+    label: "مكتبة الجرافيك الحالية"
+    type: group
+    items:
+      - name: app_config
+        label: "أقسام الجرافيك والترجمة والتواصل"
+        type: file
+        path: app-config.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: schemaVersion
+            label: "Schema Version"
+            type: number
+            readonly: true
+          - name: revision
+            label: "Revision"
+            type: number
+          - name: announcement
+            label: "رسالة التطبيق"
+            type: object
+            fields:
+              - name: ar
+                label: "العربية"
+                type: text
+              - name: en
+                label: "English"
+                type: text
+          - name: social
+            label: "التواصل"
+            type: object
+            fields:
+              - name: facebook
+                label: "Facebook"
+                type: string
+              - name: youtube
+                label: "YouTube"
+                type: string
+              - name: whatsapp
+                label: "WhatsApp"
+                type: string
+          - name: categories
+            label: "أقسام الجرافيك"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{index} · {ar} · {en}"
+            fields:
+              - name: index
+                label: "الترتيب"
+                type: number
+              - name: ar
+                label: "العربية"
+                type: string
+                required: true
+              - name: en
+                label: "English"
+                type: string
+                required: true
+              - name: page
+                label: "الصفحة / الرابط"
+                type: string
+                required: true
+              - name: thumbnails
+                label: "صور المعاينة"
+                type: string
+                list: true
+              - name: enabled
+                label: "إظهار"
+                type: boolean
+
+      - name: header_config
+        label: "الهيدر والهوية"
+        type: file
+        path: header-config.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: schemaVersion
+            label: "Schema Version"
+            type: number
+            readonly: true
+          - name: revision
+            label: "Revision"
+            type: number
+          - name: enabled
+            label: "تفعيل الهيدر"
+            type: boolean
+          - name: image
+            label: "رابط صورة الهيدر"
+            type: string
+          - name: heightDp
+            label: "ارتفاع الهيدر"
+            type: number
+          - name: scaleType
+            label: "طريقة العرض"
+            type: select
+            options:
+              values:
+                - name: centerCrop
+                  label: "ملء المساحة"
+                - name: fitCenter
+                  label: "الصورة كاملة"
+
+  - name: ai
+    label: "الذكاء الاصطناعي — مجاني"
+    type: group
+    items:
+      - name: ai_config
+        label: "AI Creative Hub"
+        type: file
+        path: ai-config.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: schemaVersion
+            label: "Schema Version"
+            type: number
+            readonly: true
+          - name: revision
+            label: "Revision"
+            type: number
+          - name: enabled
+            label: "إظهار القسم"
+            type: boolean
+          - name: title
+            label: "العنوان"
+            type: object
+            fields:
+              - name: ar
+                label: "العربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
+          - name: subtitle
+            label: "الوصف"
+            type: object
+            fields:
+              - name: ar
+                label: "العربية"
+                type: text
+              - name: en
+                label: "English"
+                type: text
+          - name: comingSoonMessage
+            label: "رسالة قريبًا"
+            type: object
+            fields:
+              - name: ar
+                label: "العربية"
+                type: text
+              - name: en
+                label: "English"
+                type: text
+          - name: freeLabel
+            label: "وسم المجانية"
+            type: object
+            fields:
+              - name: ar
+                label: "العربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
+          - name: comingSoonLabel
+            label: "وسم قريبًا"
+            type: object
+            fields:
+              - name: ar
+                label: "العربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
+          - name: homeCard
+            label: "كارت AI"
+            type: object
+            fields:
+              - name: enabled
+                label: "إظهار"
+                type: boolean
+              - name: index
+                label: "الترتيب"
+                type: number
+              - name: ar
+                label: "العربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
+              - name: page
+                label: "الصفحة"
+                type: string
+              - name: icon
+                label: "الأيقونة"
+                type: string
+              - name: badgeAr
+                label: "شارة عربية"
+                type: string
+              - name: badgeEn
+                label: "English badge"
+                type: string
+              - name: thumbnails
+                label: "صور المعاينة"
+                type: string
+                list: true
+          - name: items
+            label: "أقسام وأدوات AI"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{order} · {ar} · {en}"
+            fields:
+              - name: id
+                label: "ID"
+                type: string
+                required: true
+              - name: order
+                label: "الترتيب"
+                type: number
+              - name: icon
+                label: "الأيقونة"
+                type: string
+              - name: ar
+                label: "العربية"
+                type: string
+                required: true
+              - name: en
+                label: "English"
+                type: string
+                required: true
+              - name: descriptionAr
+                label: "الوصف بالعربية"
+                type: text
+              - name: descriptionEn
+                label: "English description"
+                type: text
+              - name: status
+                label: "الحالة"
+                type: select
+                options:
+                  values:
                     - name: comingSoon
                       label: "قريبًا"
                     - name: live
                       label: "متاح الآن"
               - name: url
-                label: "الرابط عند التفعيل"
+                label: "الرابط"
                 type: string
-                description: "اتركه فارغًا أثناء حالة قريبًا. عند التحويل إلى متاح ضع رابط HTTPS أو اسم صفحة داخلية."
               - name: enabled
-                label: "إظهار العنصر"
+                label: "إظهار"
                 type: boolean
               - name: free
                 label: "مجاني"
@@ -325,7 +526,7 @@ content:
                     label: "تفعيل"
                     type: boolean
                   - name: avoidRepeatUntilPoolExhausted
-                    label: "منع التكرار حتى انتهاء القائمة"
+                    label: "منع التكرار"
                     type: boolean
               - name: dailyTreasure
                 label: "Daily Treasure"
@@ -335,29 +536,20 @@ content:
                     label: "تفعيل"
                     type: boolean
                   - name: requiresRewarded
-                    label: "يتطلب Rewarded Ad"
+                    label: "Rewarded مطلوب"
                     type: boolean
                   - name: poolMode
-                    label: "مصدر الأقسام"
-                    type: select
-                    options:
-                      values:
-                        - name: allEnabled
-                          label: "كل الأقسام المفعلة"
-                        - name: selected
-                          label: "أقسام محددة"
+                    label: "المصدر"
+                    type: string
                   - name: categoryIndexes
-                    label: "أرقام الأقسام المحددة"
+                    label: "أرقام الأقسام"
                     type: number
                     list: true
                   - name: maxRewardedUnlocksPerDay
-                    label: "أقصى مرات الفتح يوميًا"
+                    label: "الحد اليومي"
                     type: number
-                    options:
-                      min: 1
-                      max: 100
                   - name: avoidRepeatUntilPoolExhausted
-                    label: "منع تكرار الكنوز"
+                    label: "منع التكرار"
                     type: boolean
           - name: ads
             label: "الإعلانات"
@@ -371,7 +563,7 @@ content:
                 type: object
                 fields:
                   - name: enabled
-                    label: "تفعيل Banner"
+                    label: "تفعيل"
                     type: boolean
               - name: interstitial
                 label: "Interstitial"
@@ -381,17 +573,11 @@ content:
                     label: "تفعيل"
                     type: boolean
                   - name: everyNavigations
-                    label: "بعد كل عدد تنقلات"
+                    label: "بعد كل تنقلات"
                     type: number
-                    options:
-                      min: 1
-                      max: 30
                   - name: dailyCap
-                    label: "الحد اليومي — 0 بدون حد"
+                    label: "الحد اليومي"
                     type: number
-                    options:
-                      min: 0
-                      max: 100
               - name: actionInterstitial
                 label: "إعلانات الإجراءات"
                 type: object
@@ -400,40 +586,24 @@ content:
                     label: "تفعيل"
                     type: boolean
                   - name: everyActions
-                    label: "إعلان بعد كل عدد إجراءات"
+                    label: "بعد كل إجراءات"
                     type: number
-                    options:
-                      min: 1
-                      max: 20
                   - name: minSecondsBetweenAds
-                    label: "أقل فاصل بالثواني"
+                    label: "الفاصل بالثواني"
                     type: number
-                    options:
-                      min: 0
-                      max: 600
                   - name: showNotice
-                    label: "إظهار تنبيه قبل الإعلان"
+                    label: "إظهار تنبيه"
                     type: boolean
                   - name: actions
-                    label: "الإجراءات التي تحتسب"
-                    type: select
+                    label: "الإجراءات"
+                    type: string
                     list: true
-                    options:
-                      values:
-                        - name: view
-                          label: "View"
-                        - name: download
-                          label: "Download"
-                        - name: copy
-                          label: "Copy"
-                        - name: share
-                          label: "Share"
               - name: rewarded
                 label: "Rewarded"
                 type: object
                 fields:
                   - name: enabled
-                    label: "تفعيل Rewarded"
+                    label: "تفعيل"
                     type: boolean
 
   - name: notifications
@@ -465,26 +635,23 @@ content:
             type: object
             fields:
               - name: appId
-                label: "Firebase App ID — Release"
+                label: "Release App ID"
                 type: string
-                description: "للحزمة dlfatcom.buntyfrombengal.riyantalks"
               - name: debugAppId
-                label: "Firebase App ID — Debug"
+                label: "Debug App ID"
                 type: string
-                description: "اختياري للاختبار من Android Studio للحزمة dlfatcom.buntyfrombengal.riyantalks.debug"
               - name: apiKey
-                label: "Firebase API Key"
+                label: "API Key"
                 type: string
               - name: projectId
-                label: "Firebase Project ID"
+                label: "Project ID"
                 type: string
               - name: senderId
-                label: "Sender ID / Project Number"
+                label: "Sender ID"
                 type: string
           - name: workerUrl
             label: "Cloudflare Worker URL"
             type: string
-            description: "مثال: https://designlibrary-push.account.workers.dev"
           - name: defaultTopic
             label: "Default Topic"
             type: select
