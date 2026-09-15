@@ -15,7 +15,9 @@
       "tableName": "RecentBooks",
       "order": 1,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appXP28Tmn63kcjnY",
@@ -25,7 +27,9 @@
       "tableName": "RecentBooks",
       "order": 2,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "apperIkXQ7iRGprhf",
@@ -35,7 +39,9 @@
       "tableName": "RecentBooks",
       "order": 3,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appFHjnZOo5bxFeqv",
@@ -45,7 +51,9 @@
       "tableName": "RecentBooks",
       "order": 4,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appknoX75R1XHmgew",
@@ -55,7 +63,9 @@
       "tableName": "RecentBooks",
       "order": 5,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "apptUqYoOYUbC7sdl",
@@ -65,7 +75,9 @@
       "tableName": "RecentBooks",
       "order": 6,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "app8VcusBQXJXmUKU",
@@ -75,7 +87,9 @@
       "tableName": "RecentBooks",
       "order": 7,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appgpodG0rNXiiTj1",
@@ -85,7 +99,9 @@
       "tableName": "RecentBooks",
       "order": 8,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appnjVrMgLourzkKm",
@@ -95,7 +111,9 @@
       "tableName": "RecentBooks",
       "order": 9,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appbxp3nGbyZ38Krr",
@@ -105,7 +123,9 @@
       "tableName": "RecentBooks",
       "order": 10,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appAmdXqeLjBpI946",
@@ -115,7 +135,9 @@
       "tableName": "RecentBooks",
       "order": 11,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appfRddivVYPfT6aE",
@@ -125,7 +147,9 @@
       "tableName": "RecentBooks",
       "order": 12,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appK6PBWKcK9JrwcD",
@@ -135,7 +159,9 @@
       "tableName": "RecentBooks",
       "order": 13,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appGG7oysuKKdPoWi",
@@ -145,7 +171,9 @@
       "tableName": "RecentBooks",
       "order": 14,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "app0DnljhJuY737DA",
@@ -155,7 +183,9 @@
       "tableName": "RecentBooks",
       "order": 15,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appF2Uo8CBLiVJcEP",
@@ -165,7 +195,9 @@
       "tableName": "RecentBooks",
       "order": 16,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appQ2N95c4Ju9Zwoj",
@@ -175,7 +207,9 @@
       "tableName": "RecentBooks",
       "order": 17,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "apptnFCXZ9DANb7Uh",
@@ -185,7 +219,9 @@
       "tableName": "RecentBooks",
       "order": 18,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appudVhsKwaMqbhkq",
@@ -195,7 +231,9 @@
       "tableName": "RecentBooks",
       "order": 19,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appnkEDhhx8um8IBV",
@@ -205,7 +243,9 @@
       "tableName": "RecentBooks",
       "order": 20,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "app9xtpa6RHlKlkPQ",
@@ -215,7 +255,9 @@
       "tableName": "RecentBooks",
       "order": 21,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appVhvu4DnjCEmUjD",
@@ -225,7 +267,9 @@
       "tableName": "RecentBooks",
       "order": 22,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appTBmlkLnofysc5P",
@@ -235,7 +279,9 @@
       "tableName": "RecentBooks",
       "order": 23,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appJTHR7xSUnJpbjy",
@@ -245,7 +291,9 @@
       "tableName": "RecentBooks",
       "order": 24,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appwkwfEUMAc7tDGE",
@@ -255,7 +303,9 @@
       "tableName": "RecentBooks",
       "order": 25,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appdbW4Azo3OBwoQd",
@@ -265,7 +315,9 @@
       "tableName": "RecentBooks",
       "order": 26,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appMRXhlEG00h2cLz",
@@ -275,7 +327,9 @@
       "tableName": "RecentBooks",
       "order": 27,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appXhewtVLx2GTCbJ",
@@ -285,7 +339,9 @@
       "tableName": "RecentBooks",
       "order": 28,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     },
     {
       "id": "appItGNZr0fTNOXS7",
@@ -295,7 +351,9 @@
       "tableName": "RecentBooks",
       "order": 29,
       "enabled": true,
-      "source": "airtable"
+      "source": "airtable",
+      "image": "",
+      "items": []
     }
   ],
   "analyticsEnabled": true
