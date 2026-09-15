@@ -31,7 +31,8 @@
 <script>
 (function(){
 const CONFIG='ai-config.json';
-const lang=(window.__dlLang||localStorage.getItem('dl-language')||document.documentElement.lang||'ar').toLowerCase().startsWith('en')?'en':'ar';
+let lang=(window.__dlLang||localStorage.getItem('dl-language')||document.documentElement.lang||'ar').toLowerCase().startsWith('en')?'en':'ar';
+let lastCfg=null;
 document.documentElement.lang=lang;document.documentElement.dir=lang==='en'?'ltr':'rtl';
 document.body.dir=document.documentElement.dir;
 const $=id=>document.getElementById(id);
@@ -48,6 +49,7 @@ function openItem(item,cfg){
   if(u.origin===location.origin) location.href=u.href; else window.open(u.href,'_blank','noopener');
 }
 function render(cfg){
+  lastCfg=cfg;
   $('title').textContent=tr(cfg.title,lang==='en'?'AI Creative Hub':'مركز الإبداع بالذكاء الاصطناعي');
   $('subtitle').textContent=tr(cfg.subtitle,'');
   $('freeTop').textContent='✨ '+tr(cfg.freeLabel,lang==='en'?'FREE':'مجاني')+' 100%';
@@ -68,6 +70,7 @@ function render(cfg){
     b.append(icon,h,p,badges);b.addEventListener('click',()=>openItem(item,cfg));grid.append(b);
   });
 }
+window.DesignLibraryAiSetLanguage=function(next){lang=String(next||'ar').toLowerCase().startsWith('en')?'en':'ar';document.documentElement.lang=lang;document.documentElement.dir=lang==='en'?'ltr':'rtl';document.body.dir=document.documentElement.dir;if(lastCfg)render(lastCfg);};
 $('closeModal').addEventListener('click',()=>$('modal').classList.remove('show'));
 $('modal').addEventListener('click',e=>{if(e.target===$('modal'))$('modal').classList.remove('show')});
 fetch(CONFIG+'?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(cfg=>{if(!cfg||cfg.enabled===false)throw Error('AI hub disabled');render(cfg)}).catch(err=>{$('error').hidden=false;$('error').textContent=lang==='en'?'AI section is temporarily unavailable.':'قسم الذكاء الاصطناعي غير متاح مؤقتًا.';});
