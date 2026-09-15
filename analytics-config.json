@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
-  "enabled": false,
+  "revision": 2,
+  "enabled": true,
   "showCounters": true,
-  "backendUrl": ""
+  "backendUrl": "https://script.google.com/macros/s/AKfycbwt1pRFL685LXYe5U4hny9MuxO550huR-1Gd6QSeGZlCfBtInUgB6nlwVLUk0ZQyPmsUg/exec"
 }
