@@ -32,17 +32,12 @@
       "descriptionAr": "قوالب، ملفات تصميم، موكاب، شعارات وموارد جرافيك مجانية.",
       "descriptionEn": "Free templates, design files, mockups, logos and graphic resources.",
       "status": "live",
-<<<<<<< Updated upstream
-      "url": "section.html?section=graphics",
-      "enabled": true
-=======
       "url": "index.html",
       "enabled": true,
       "target": "web",
       "image": "",
       "badgeAr": "",
       "badgeEn": ""
->>>>>>> Stashed changes
     },
     {
       "id": "courses",
@@ -54,15 +49,11 @@
       "descriptionEn": "Curated courses and tutorials in design, creativity and technology.",
       "status": "comingSoon",
       "url": "section.html?section=courses",
-<<<<<<< Updated upstream
-      "enabled": true
-=======
       "enabled": true,
       "target": "web",
       "image": "",
       "badgeAr": "",
       "badgeEn": ""
->>>>>>> Stashed changes
     },
     {
       "id": "marketing",
@@ -74,15 +65,11 @@
       "descriptionEn": "Free resources, tools and templates for marketing and content creation.",
       "status": "comingSoon",
       "url": "section.html?section=marketing",
-<<<<<<< Updated upstream
-      "enabled": true
-=======
       "enabled": true,
       "target": "web",
       "image": "",
       "badgeAr": "",
       "badgeEn": ""
->>>>>>> Stashed changes
     },
     {
       "id": "programs",
@@ -94,15 +81,11 @@
       "descriptionEn": "Free software, tools and useful resources for designers and creators.",
       "status": "comingSoon",
       "url": "section.html?section=programs",
-<<<<<<< Updated upstream
-      "enabled": true
-=======
       "enabled": true,
       "target": "web",
       "image": "",
       "badgeAr": "",
       "badgeEn": ""
->>>>>>> Stashed changes
     },
     {
       "id": "three-d",
@@ -114,15 +97,11 @@
       "descriptionEn": "Free 3D models, materials, files and resources.",
       "status": "comingSoon",
       "url": "section.html?section=three-d",
-<<<<<<< Updated upstream
-      "enabled": true
-=======
       "enabled": true,
       "target": "web",
       "image": "",
       "badgeAr": "",
       "badgeEn": ""
->>>>>>> Stashed changes
     },
     {
       "id": "books",
@@ -134,15 +113,11 @@
       "descriptionEn": "Free books and references in design, art, creativity and technology.",
       "status": "live",
       "url": "section.html?section=books",
-<<<<<<< Updated upstream
-      "enabled": true
-=======
       "enabled": true,
       "target": "books",
       "image": "",
       "badgeAr": "",
       "badgeEn": ""
->>>>>>> Stashed changes
     },
     {
       "id": "ai",
@@ -153,17 +128,12 @@
       "descriptionAr": "مسارات عمل، برومبتات، أدوات وتطبيقات ذكاء اصطناعي مجانية.",
       "descriptionEn": "Free AI workflows, prompts, tools and apps.",
       "status": "live",
-<<<<<<< Updated upstream
-      "url": "section.html?section=ai",
-      "enabled": true
-=======
       "url": "ai-hub.html",
       "enabled": true,
       "target": "web",
       "image": "",
       "badgeAr": "",
       "badgeEn": ""
->>>>>>> Stashed changes
     },
     {
       "id": "other",
@@ -175,12 +145,6 @@
       "descriptionEn": "More free resources and useful collections coming over time.",
       "status": "comingSoon",
       "url": "section.html?section=other",
-<<<<<<< Updated upstream
-      "enabled": true
-    }
-  ]
-}
-=======
       "enabled": true,
       "target": "web",
       "image": "",
@@ -215,4 +179,3 @@
     }
   ]
 }
->>>>>>> Stashed changes
