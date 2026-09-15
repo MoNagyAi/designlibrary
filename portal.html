@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مكتبة التصميم</title>
+<style>
+:root{color-scheme:dark;--bg:#020b13;--panel:#0b1926;--panel2:#102235;--line:#26394b;--gold:#e3ad39;--gold2:#f2ce73;--text:#f7f3e8;--muted:#aebcca;--green:#1bc8a5;--violet:#886bff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0,#6d4cff22,transparent 30%),linear-gradient(180deg,#06121d,#020b13 55%);color:var(--text);font-family:Arial,Tahoma,sans-serif;min-height:100vh;-webkit-tap-highlight-color:transparent}.portal-wrap{max-width:1040px;margin:auto;padding:18px 14px 38px}.portal-intro{border:1px solid #d7aa4655;background:linear-gradient(145deg,#141a21,#091521);border-radius:22px;padding:18px 17px;margin-bottom:16px;box-shadow:0 16px 40px #0006}.portal-brand{font-size:11px;color:var(--gold2);font-weight:800;letter-spacing:.9px;text-transform:uppercase}.portal-intro h1{font-size:23px;line-height:1.45;margin:8px 0 6px}.portal-intro p{font-size:13px;line-height:1.8;color:var(--muted);margin:0}.free-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:10px 12px;border:1px solid #1bc8a566;background:#07332e;border-radius:13px}.free-strip strong{font-size:12px;color:#86f4dc}.free-strip span{font-size:10px;color:#bcebe1}.portal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.portal-card{position:relative;appearance:none;width:100%;min-height:176px;text-align:start;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,var(--panel2),#07131e);color:inherit;padding:14px 13px 46px;font:inherit;box-shadow:0 9px 22px #0004;cursor:pointer;overflow:hidden}.portal-card:active{transform:scale(.985)}.portal-card.live{border-color:#d7aa466f}.portal-card.soon{opacity:.88}.portal-icon{width:42px;height:42px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:21px;background:#d7aa4616;border:1px solid #d7aa464d;margin-bottom:11px}.portal-card h2{font-size:14px;line-height:1.5;margin:0 0 7px}.portal-card p{font-size:11px;line-height:1.65;margin:0;color:var(--muted)}.portal-status{position:absolute;inset-inline-start:12px;bottom:11px;border-radius:999px;padding:5px 8px;font-size:9px;font-weight:800;letter-spacing:.4px}.portal-status.live{background:#073b32;color:#7eefd6;border:1px solid #1bc8a577}.portal-status.soon{background:#3a2d10;color:#f3cc6c;border:1px solid #e3ad3977}.portal-free{position:absolute;inset-inline-end:12px;bottom:11px;color:#aebcca;font-size:9px;font-weight:800}.portal-empty,.portal-error{text-align:center;padding:46px 18px;color:var(--muted);line-height:1.8}.portal-error{border:1px solid #8f3b3b;background:#321818;border-radius:15px;color:#ffd4d4}.portal-modal{position:fixed;inset:0;z-index:999;background:#000c;display:none;align-items:center;justify-content:center;padding:22px}.portal-modal.show{display:flex}.portal-dialog{width:min(420px,100%);background:#0d1b29;border:1px solid #d7aa4666;border-radius:20px;padding:22px;text-align:center;box-shadow:0 24px 80px #000a}.portal-dialog .emoji{font-size:40px}.portal-dialog h3{font-size:19px;margin:10px 0 7px}.portal-dialog p{font-size:13px;line-height:1.8;color:var(--muted);margin:0 0 16px}.portal-dialog button{border:1px solid #f4d27e;background:linear-gradient(#efc95d,#d7a52f);color:#171108;border-radius:12px;padding:11px 22px;font-weight:800}@media(min-width:760px){.portal-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.portal-card{min-height:190px}.portal-intro h1{font-size:28px}}
+</style>
+</head>
+<body>
+<main class="portal-wrap">
+  <section class="portal-intro">
+    <div id="brand" class="portal-brand">DESIGN LIBRARY</div>
+    <h1 id="title">كل ما يحتاجه المبدع في مكان واحد</h1>
+    <p id="subtitle">جرافيك، كتب، ذكاء اصطناعي والمزيد — جميع المحتويات مجانية.</p>
+    <div class="free-strip"><strong id="freeLabel">مجاني بالكامل</strong><span id="freeSub">Graphics • Books • AI • More</span></div>
+  </section>
+  <section id="portalGrid" class="portal-grid" aria-live="polite"></section>
+  <div id="state" class="portal-empty">جاري تحميل الأقسام…</div>
+</main>
+<div id="soonModal" class="portal-modal" role="dialog" aria-modal="true" aria-labelledby="soonTitle">
+  <div class="portal-dialog"><div class="emoji">🚧</div><h3 id="soonTitle">قريبًا</h3><p id="soonText"></p><button id="closeSoon">حسنًا</button></div>
+</div>
+<script>
+(()=>{
+const CONFIG='portal-config.json'; let cfg=null,lastLang='';
+const $=id=>document.getElementById(id);
+function language(){const q=new URLSearchParams(location.search).get('lang');const native=window.__dlLang;return (native==='en'||native==='ar')?native:(q==='en'?'en':'ar')}
+function safeInternal(raw){if(!raw)return '';try{const u=new URL(raw,location.href);if(u.protocol!=='https:'||u.host!==location.host||!u.pathname.startsWith('/designlibrary/'))return '';return u.href}catch(e){return ''}}
+function text(obj,lang,fallback=''){return obj&&typeof obj[lang]==='string'?obj[lang]:fallback}
+function go(raw){const u=safeInternal(raw);if(!u)return;const x=new URL(u);x.searchParams.set('lang',language());location.href=x.href}
+function render(){if(!cfg)return;const lang=language(),en=lang==='en';lastLang=lang;document.documentElement.lang=lang;document.documentElement.dir=en?'ltr':'rtl';document.title=text(cfg.brand,lang,en?'Design Library':'مكتبة التصميم');$('brand').textContent=text(cfg.brand,lang,document.title);$('title').textContent=text(cfg.title,lang,'');$('subtitle').textContent=text(cfg.subtitle,lang,'');$('freeLabel').textContent=text(cfg.freeLabel,lang,en?'100% FREE':'مجاني بالكامل');$('freeSub').textContent=en?'Graphics • Books • AI • More':'جرافيك • كتب • AI • والمزيد';const list=(Array.isArray(cfg.sections)?cfg.sections:[]).filter(x=>x&&x.enabled!==false).sort((a,b)=>(a.order||0)-(b.order||0));const g=$('portalGrid');g.replaceChildren();$('state').hidden=!!list.length;for(const x of list){const live=x.status==='live';const b=document.createElement('button');b.type='button';b.className='portal-card '+(live?'live':'soon');b.innerHTML=`<div class="portal-icon"></div><h2></h2><p></p><span class="portal-status ${live?'live':'soon'}"></span><span class="portal-free"></span>`;b.querySelector('.portal-icon').textContent=x.icon||'•';b.querySelector('h2').textContent=en?(x.en||x.ar):(x.ar||x.en);b.querySelector('p').textContent=en?(x.descriptionEn||''):(x.descriptionAr||'');b.querySelector('.portal-status').textContent=live?(en?'OPEN':'مفتوح'):(en?'COMING SOON':'قريبًا');b.querySelector('.portal-free').textContent=en?'FREE':'مجاني';b.addEventListener('click',()=>{if(live)go(x.url);else showSoon(x)});g.appendChild(b)}}
+function showSoon(x){const en=language()==='en';$('soonTitle').textContent=en?'Coming Soon':'قريبًا';$('soonText').textContent=text(cfg.comingSoonMessage,en?'en':'ar',en?'Coming soon.':'قريبًا.');$('closeSoon').textContent=en?'OK':'حسنًا';$('soonModal').classList.add('show')}
+function close(){ $('soonModal').classList.remove('show') }
+$('closeSoon').onclick=close;$('soonModal').onclick=e=>{if(e.target===$('soonModal'))close()};
+fetch(CONFIG+'?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{if(!x||x.schemaVersion!==1||!Array.isArray(x.sections))throw Error();cfg=x;render()}).catch(()=>{$('state').className='portal-error';$('state').textContent=language()==='en'?'Unable to load sections. Tap Reload.':'تعذر تحميل الأقسام. اضغط تحديث.'});
+setInterval(()=>{if(cfg&&language()!==lastLang)render()},250);
+})();
+</script>
+</body></html>
