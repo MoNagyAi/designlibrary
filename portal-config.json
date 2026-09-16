@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
+  "revision": 3,
   "enabled": true,
   "brand": {
     "ar": "مكتبة التصميم",
@@ -33,7 +33,8 @@
       "status": "live",
       "url": "section.html?section=books",
       "enabled": true,
-      "target": "books"
+      "target": "books",
+      "order": 1
     },
     {
       "id": "graphics",
@@ -45,7 +46,8 @@
       "status": "live",
       "url": "index.html",
       "enabled": true,
-      "target": "web"
+      "target": "web",
+      "order": 2
     },
     {
       "id": "ai",
@@ -57,7 +59,21 @@
       "status": "live",
       "url": "ai-hub.html",
       "enabled": true,
-      "target": "web"
+      "target": "web",
+      "order": 3
+    },
+    {
+      "id": "nagy",
+      "icon": "✨",
+      "ar": "ناجي",
+      "en": "nagy",
+      "descriptionAr": "مسارات عمل، برومبتات، أدوات وتطبيقات ذكاء اصطناعي مجانية.",
+      "descriptionEn": "Free AI workflows, prompts, tools and apps.",
+      "status": "comingSoon",
+      "url": "ai-hub.html",
+      "enabled": true,
+      "target": "web",
+      "order": 4
     },
     {
       "id": "programs",
@@ -69,7 +85,8 @@
       "status": "comingSoon",
       "url": "section.html?section=programs",
       "enabled": true,
-      "target": "web"
+      "target": "web",
+      "order": 5
     }
   ],
   "showViews": true,
