@@ -7,7 +7,7 @@
     "en": "Design Library"
   },
   "title": {
-    "ar": "كل ما يحتاجه الفنان في مكان واحد",
+    "ar": "كل ما يحتاجه المبدع في مكان واحد",
     "en": "Everything a creator needs in one place"
   },
   "subtitle": {
@@ -26,15 +26,14 @@
     {
       "id": "books",
       "icon": "📚",
-      "ar": "كتب",
+      "ar": "كتب جميع المجالات",
       "en": "Books",
       "descriptionAr": "كتب ومراجع مجانية في التصميم والفن والإبداع والتقنية.",
       "descriptionEn": "Free books and references in design, art, creativity and technology.",
       "status": "live",
       "url": "section.html?section=books",
       "enabled": true,
-      "target": "books",
-      "order": 1
+      "target": "books"
     },
     {
       "id": "graphics",
@@ -46,8 +45,7 @@
       "status": "live",
       "url": "index.html",
       "enabled": true,
-      "target": "web",
-      "order": 2
+      "target": "web"
     },
     {
       "id": "ai",
@@ -59,8 +57,7 @@
       "status": "live",
       "url": "ai-hub.html",
       "enabled": true,
-      "target": "web",
-      "order": 3
+      "target": "web"
     },
     {
       "id": "nagy",
@@ -72,8 +69,7 @@
       "status": "comingSoon",
       "url": "ai-hub.html",
       "enabled": true,
-      "target": "web",
-      "order": 4
+      "target": "web"
     },
     {
       "id": "programs",
@@ -85,8 +81,7 @@
       "status": "comingSoon",
       "url": "section.html?section=programs",
       "enabled": true,
-      "target": "web",
-      "order": 5
+      "target": "web"
     }
   ],
   "showViews": true,
