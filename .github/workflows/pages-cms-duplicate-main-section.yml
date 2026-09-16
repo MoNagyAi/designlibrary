@@ -1,0 +1,143 @@
+name: Pages CMS - Duplicate Main Section
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: Pages CMS action payload
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-cms-duplicate-main-section-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  duplicate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse target branch
+        id: meta
+        shell: bash
+        env:
+          PAYLOAD: ${{ inputs.payload }}
+        run: |
+          node <<'NODE'
+          const p = JSON.parse(process.env.PAYLOAD || '{}');
+          const ref = (p.repository && p.repository.ref) || 'main';
+          require('fs').appendFileSync(process.env.GITHUB_OUTPUT, `ref=${ref}\n`);
+          NODE
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.meta.outputs.ref }}
+          fetch-depth: 0
+
+      - name: Duplicate section
+        shell: bash
+        env:
+          PAYLOAD: ${{ inputs.payload }}
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const payload = JSON.parse(process.env.PAYLOAD || '{}');
+          const inputs = payload.inputs || {};
+
+          const sourceId = String(inputs.source_id || '').trim();
+          const newId = String(inputs.new_id || '').trim();
+          const newAr = String(inputs.new_ar || '').trim();
+          const newEn = String(inputs.new_en || '').trim();
+          const copyContent = inputs.copy_content === true || String(inputs.copy_content).toLowerCase() === 'true';
+          const publishCopy = inputs.publish_copy === true || String(inputs.publish_copy).toLowerCase() === 'true';
+
+          if (!sourceId) throw new Error('source_id is required');
+          if (!/^[a-z0-9][a-z0-9_-]{1,63}$/i.test(newId)) {
+            throw new Error('new_id must be 2-64 characters: letters, numbers, - or _');
+          }
+
+          const portalPath = 'portal-config.json';
+          if (!fs.existsSync(portalPath)) throw new Error('portal-config.json not found');
+          const portal = JSON.parse(fs.readFileSync(portalPath, 'utf8'));
+          if (!Array.isArray(portal.sections)) throw new Error('portal-config.json: sections is not an array');
+
+          const sourceIndex = portal.sections.findIndex(s => s && String(s.id) === sourceId);
+          if (sourceIndex < 0) throw new Error(`Source section not found: ${sourceId}`);
+          if (portal.sections.some(s => s && String(s.id) === newId)) {
+            throw new Error(`Section ID already exists: ${newId}`);
+          }
+
+          const source = portal.sections[sourceIndex];
+          const clone = JSON.parse(JSON.stringify(source));
+          clone.id = newId;
+          clone.ar = newAr || `${source.ar || sourceId} — نسخة`;
+          clone.en = newEn || `${source.en || sourceId} Copy`;
+          clone.enabled = true;
+          if (!publishCopy) clone.status = 'comingSoon';
+
+          // Native CMS sections should point to their new section ID automatically.
+          if (String(clone.target || '') === 'cms') {
+            clone.url = `section.html?section=${encodeURIComponent(newId)}`;
+          }
+
+          portal.sections.splice(sourceIndex + 1, 0, clone);
+          // Keep legacy order numbers aligned with the visible list order.
+          portal.sections.forEach((s, i) => { if (s && typeof s === 'object') s.order = i + 1; });
+          portal.revision = (Number(portal.revision) || 0) + 1;
+          fs.writeFileSync(portalPath, JSON.stringify(portal, null, 2) + '\n');
+
+          let copiedItems = 0;
+          if (copyContent && fs.existsSync('library-content.json')) {
+            const lib = JSON.parse(fs.readFileSync('library-content.json', 'utf8'));
+            if (Array.isArray(lib.items)) {
+              const originals = lib.items.filter(x => x && String(x.section) === sourceId);
+              const used = new Set(lib.items.map(x => x && String(x.id || '')).filter(Boolean));
+              const duplicates = originals.map((item, index) => {
+                const c = JSON.parse(JSON.stringify(item));
+                c.section = newId;
+                const raw = String(item.id || `item-${index + 1}`)
+                  .toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '') || `item-${index + 1}`;
+                let candidate = `${newId}-${raw}`.slice(0, 110);
+                let n = 2;
+                while (used.has(candidate)) candidate = `${newId}-${raw}-${n++}`.slice(0, 120);
+                c.id = candidate;
+                used.add(candidate);
+                return c;
+              });
+              if (duplicates.length) {
+                lib.items.push(...duplicates);
+                lib.revision = (Number(lib.revision) || 0) + 1;
+                fs.writeFileSync('library-content.json', JSON.stringify(lib, null, 2) + '\n');
+                copiedItems = duplicates.length;
+              }
+            }
+          }
+
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
+            `## تم نسخ القسم بنجاح\n\n` +
+            `- المصدر: \`${sourceId}\`\n` +
+            `- النسخة: \`${newId}\`\n` +
+            `- محتويات منسوخة: **${copiedItems}**\n` +
+            `- الحالة: **${publishCopy ? 'مفتوح' : 'قريبًا'}**\n`
+          );
+          NODE
+
+      - name: Commit changes
+        shell: bash
+        env:
+          PAYLOAD: ${{ inputs.payload }}
+        run: |
+          SOURCE_ID=$(node -e "const p=JSON.parse(process.env.PAYLOAD);process.stdout.write(String(p.inputs.source_id||''))")
+          NEW_ID=$(node -e "const p=JSON.parse(process.env.PAYLOAD);process.stdout.write(String(p.inputs.new_id||''))")
+          git config user.name "Pages CMS Automation"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add portal-config.json library-content.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "cms: duplicate section ${SOURCE_ID} -> ${NEW_ID}"
+          git push origin "HEAD:${{ steps.meta.outputs.ref }}"

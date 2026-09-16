@@ -28,6 +28,38 @@ content:
       create: false
       rename: false
       delete: false
+    actions:
+    - name: duplicate-main-section
+      label: نسخ قسم رئيسي
+      workflow: pages-cms-duplicate-main-section.yml
+      ref: current
+      confirm:
+        title: نسخ قسم رئيسي
+        message: سيتم إنشاء نسخة جديدة من القسم المحدد. استخدم ID جديد وفريد.
+        button: نسخ القسم
+      fields:
+      - name: source_id
+        label: ID القسم الأصلي
+        type: text
+        required: true
+      - name: new_id
+        label: ID القسم الجديد — حروف إنجليزية/أرقام/شرطة فقط
+        type: text
+        required: true
+      - name: new_ar
+        label: الاسم العربي الجديد — اختياري
+        type: text
+      - name: new_en
+        label: English name — optional
+        type: text
+      - name: copy_content
+        label: نسخ محتويات القسم من library-content.json أيضًا
+        type: checkbox
+        default: true
+      - name: publish_copy
+        label: فتح النسخة الجديدة مباشرة بدل قريبًا
+        type: checkbox
+        default: false
     fields:
     - name: schemaVersion
       label: Schema Version
@@ -95,15 +127,12 @@ content:
       list:
         collapsible:
           collapsed: true
-          summary: '{order} · {ar} · {en}'
+          summary: '{id} · {ar} · {en}'
       fields:
       - name: id
-        label: ID — لا تغيّره
+        label: ID — استخدمه عند نسخ القسم ولا تكرر نفس ID
         type: string
         required: true
-      - name: order
-        label: الترتيب
-        type: number
       - name: icon
         label: الأيقونة
         type: string
@@ -131,7 +160,7 @@ content:
           - name: comingSoon
             label: قريبًا
       - name: url
-        label: رابط القسم
+        label: الرابط — مثال index.html أو https://example.com
         type: string
       - name: enabled
         label: إظهار القسم
@@ -141,9 +170,14 @@ content:
         type: select
         options:
           values:
-          - web
-          - books
-          - external
+          - name: web
+            label: داخل التطبيق — صفحة HTML أو موقع HTTPS
+          - name: external
+            label: في المتصفح الخارجي
+          - name: cms
+            label: قسم داخلي من محتوى Pages CMS
+          - name: books
+            label: مكتبة الكتب الداخلية
       - name: image
         label: صورة الكارت
         type: image
@@ -229,27 +263,9 @@ content:
         type: string
         required: true
       - name: section
-        label: القسم
-        type: select
+        label: ID القسم — اكتب نفس ID الموجود في الأقسام الرئيسية، مثال courses
+        type: string
         required: true
-        options:
-          values:
-          - name: graphics
-            label: جرافيك
-          - name: courses
-            label: كورسات
-          - name: marketing
-            label: تسويق
-          - name: programs
-            label: برامج
-          - name: three-d
-            label: ثري دي
-          - name: books
-            label: كتب
-          - name: ai
-            label: AI
-          - name: other
-            label: أخرى
       - name: order
         label: الترتيب داخل القسم
         type: number
@@ -378,9 +394,6 @@ content:
       - name: date
         label: تاريخ / نص اختياري
         type: string
-      - name: order
-        label: الترتيب
-        type: number
       - name: enabled
         label: إظهار
         type: boolean
@@ -605,15 +618,12 @@ content:
       list:
         collapsible:
           collapsed: true
-          summary: '{order} · {ar} · {en}'
+          summary: '{ar} · {en}'
       fields:
       - name: id
         label: ID
         type: string
         required: true
-      - name: order
-        label: الترتيب
-        type: number
       - name: icon
         label: الأيقونة
         type: string
