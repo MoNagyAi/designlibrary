@@ -24,19 +24,6 @@
   },
   "sections": [
     {
-      "id": "three-d",
-      "order": 5,
-      "icon": "🧊",
-      "ar": "ثري دي",
-      "en": "3D",
-      "descriptionAr": "موديلات وخامات وملفات وموارد ثلاثية الأبعاد مجانية.",
-      "descriptionEn": "Free 3D models, materials, files and resources.",
-      "status": "live",
-      "url": "https://contra.com/independent/discovery?r=mohamed_nagy_i4j7qoa5",
-      "enabled": true,
-      "target": "web"
-    },
-    {
       "id": "graphics",
       "order": 1,
       "icon": "🎨",
@@ -46,6 +33,19 @@
       "descriptionEn": "Free templates, design files, mockups, logos and graphic resources.",
       "status": "live",
       "url": "index.html",
+      "enabled": true,
+      "target": "web"
+    },
+    {
+      "id": "three-d",
+      "order": 5,
+      "icon": "🧊",
+      "ar": "ثري دي",
+      "en": "3D",
+      "descriptionAr": "موديلات وخامات وملفات وموارد ثلاثية الأبعاد مجانية.",
+      "descriptionEn": "Free 3D models, materials, files and resources.",
+      "status": "live",
+      "url": "https://contra.com/independent/discovery?r=mohamed_nagy_i4j7qoa5",
       "enabled": true,
       "target": "web"
     },
