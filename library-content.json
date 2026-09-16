@@ -10,9 +10,7 @@
       "titleEn": "Full Graphics Library",
       "descriptionAr": "تصفح مكتبة القوالب والملفات والموكاب والشعارات وموارد التصميم الحالية.",
       "descriptionEn": "Browse the current library of templates, design files, mockups, logos and graphic resources.",
-      "image": "",
       "url": "index.html",
-      "downloadUrl": "",
       "badgeAr": "المكتبة الحالية",
       "badgeEn": "CURRENT LIBRARY",
       "enabled": true
@@ -25,12 +23,18 @@
       "titleEn": "AI Creative Hub",
       "descriptionAr": "ComfyUI Workflows وComfyUI Apps والنص إلى صورة والفيديو والبرومبتات والمزيد.",
       "descriptionEn": "ComfyUI workflows, ComfyUI apps, text-to-image, video, prompts and more.",
-      "image": "",
       "url": "ai-hub.html",
-      "downloadUrl": "",
       "badgeAr": "مجاني",
       "badgeEn": "FREE",
       "enabled": true
+    },
+    {
+      "id": "ddfsf",
+      "section": "dgdfg",
+      "order": 5,
+      "titleAr": "يسيليل",
+      "titleEn": "adsaf",
+      "enabled": false
     }
   ]
 }
