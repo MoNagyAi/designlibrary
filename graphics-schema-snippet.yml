@@ -1,0 +1,74 @@
+  - name: graphics_content
+    label: بطاقات ملفات الجرافيك — تعديل وإضافة دون حذف الصفحات القديمة
+    type: file
+    path: graphics-content.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+    - name: schemaVersion
+      label: Schema Version
+      type: number
+      readonly: true
+    - name: revision
+      label: Revision
+      type: number
+    - name: pages
+      label: صفحات الملفات المراد تعديلها
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{page}'
+      fields:
+      - name: page
+        label: اسم ملف الصفحة كما هو — مثال كروت_شخصية_عربي.html
+        type: string
+        required: true
+      - name: mode
+        label: أسلوب التطبيق
+        type: select
+        options:
+          values:
+          - name: patch
+            label: تعديل/إضافة مع إبقاء الملفات القديمة
+          - name: replace
+            label: استبدال جميع بطاقات هذه الصفحة ببطاقات CMS
+      - name: items
+        label: بطاقات الملفات
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{id} · {titleAr}'
+        fields:
+        - name: id
+          label: معرّف فريد جديد للبطاقة — لا تكرره داخل الصفحة
+          type: string
+          required: true
+        - name: legacyIndex
+          label: رقم البطاقة القديمة لتعديلها — 1 للأولى، اتركه فارغًا للإضافة
+          type: number
+        - name: titleAr
+          label: الاسم العربي
+          type: string
+        - name: titleEn
+          label: English title
+          type: string
+        - name: image
+          label: صورة المعاينة HTTPS
+          type: string
+        - name: size
+          label: الحجم كنص مثال 403 KB
+          type: string
+        - name: url
+          label: رابط العرض HTTPS
+          type: string
+        - name: downloadUrl
+          label: رابط التحميل HTTPS
+          type: string
+        - name: enabled
+          label: إظهار البطاقة — ألغِه لإخفاء القديمة
+          type: boolean
