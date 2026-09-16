@@ -27,14 +27,6 @@
       "badgeAr": "مجاني",
       "badgeEn": "FREE",
       "enabled": true
-    },
-    {
-      "id": "ddfsf",
-      "section": "dgdfg",
-      "order": 5,
-      "titleAr": "يسيليل",
-      "titleEn": "adsaf",
-      "enabled": false
     }
   ]
 }
