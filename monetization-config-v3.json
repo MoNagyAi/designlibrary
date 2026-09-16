@@ -1,21 +1,39 @@
 {
   "schemaVersion": 1,
-  "revision": 6,
+  "revision": 7,
   "features": {
-    "randomLibrary": {"enabled": true, "avoidRepeatUntilPoolExhausted": true},
-    "dailyTreasure": {"enabled": true, "requiresRewarded": true, "poolMode": "allEnabled", "categoryIndexes": [], "maxRewardedUnlocksPerDay": 50, "avoidRepeatUntilPoolExhausted": true}
+    "randomLibrary": {
+      "enabled": true,
+      "avoidRepeatUntilPoolExhausted": true
+    },
+    "dailyTreasure": {
+      "enabled": true,
+      "requiresRewarded": true,
+      "poolMode": "allEnabled",
+      "categoryIndexes": [],
+      "maxRewardedUnlocksPerDay": 15,
+      "avoidRepeatUntilPoolExhausted": true
+    }
   },
   "ads": {
     "enabled": false,
-    "banner": {"enabled": true},
-    "interstitial": {"enabled": true, "everyNavigations": 4, "dailyCap": 0},
-    "actionInterstitial": {
+    "banner": {
+      "enabled": true
+    },
+    "interstitial": {
       "enabled": true,
-      "everyActions": 2,
-      "minSecondsBetweenAds": 30,
+      "everyNavigations": 5,
+      "dailyCap": 8
+    },
+    "actionInterstitial": {
+      "enabled": false,
+      "everyActions": 5,
+      "minSecondsBetweenAds": 120,
       "showNotice": true,
       "actions": ["view", "download", "copy", "share"]
     },
-    "rewarded": {"enabled": true}
+    "rewarded": {
+      "enabled": true
+    }
   }
 }
