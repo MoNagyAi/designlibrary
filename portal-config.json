@@ -24,30 +24,6 @@
   },
   "sections": [
     {
-      "id": "three-d",
-      "icon": "🧊",
-      "ar": "ثري دي",
-      "en": "3D",
-      "descriptionAr": "موديلات وخامات وملفات وموارد ثلاثية الأبعاد مجانية.",
-      "descriptionEn": "Free 3D models, materials, files and resources.",
-      "status": "live",
-      "url": "https://github.com/MoNagyAi/designlibrary/blob/main/(2_gb_)_-_%D8%AA%D9%88%D9%84%D9%83%D9%8A%D8%AA.html",
-      "enabled": true,
-      "target": "web"
-    },
-    {
-      "id": "MAGY",
-      "icon": "🧊",
-      "ar": "ناجي",
-      "en": "NAGY",
-      "descriptionAr": "موديلات وخامات وملفات وموارد ثلاثية الأبعاد مجانية.",
-      "descriptionEn": "Free 3D models, materials, files and resources.",
-      "status": "comingSoon",
-      "url": "https://github.com/MoNagyAi/designlibrary/blob/main/(2_gb_)_-_%D8%AA%D9%88%D9%84%D9%83%D9%8A%D8%AA.html",
-      "enabled": true,
-      "target": "web"
-    },
-    {
       "id": "graphics",
       "icon": "🎨",
       "ar": "جرافيك",
@@ -72,18 +48,6 @@
       "target": "books"
     },
     {
-      "id": "courses",
-      "icon": "🎓",
-      "ar": "كورسات",
-      "en": "Courses",
-      "descriptionAr": "كورسات ودروس مختارة في التصميم والإبداع والتقنية.",
-      "descriptionEn": "Curated courses and tutorials in design, creativity and technology.",
-      "status": "comingSoon",
-      "url": "section.html?section=courses",
-      "enabled": true,
-      "target": "web"
-    },
-    {
       "id": "ai",
       "icon": "✨",
       "ar": "الذكاء الاصطناعي",
@@ -96,18 +60,6 @@
       "target": "web"
     },
     {
-      "id": "marketing",
-      "icon": "📣",
-      "ar": "تسويق",
-      "en": "Marketing",
-      "descriptionAr": "مصادر وأدوات وقوالب تساعد في التسويق وصناعة المحتوى.",
-      "descriptionEn": "Free resources, tools and templates for marketing and content creation.",
-      "status": "comingSoon",
-      "url": "section.html?section=marketing",
-      "enabled": true,
-      "target": "web"
-    },
-    {
       "id": "programs",
       "icon": "💻",
       "ar": "برامج",
@@ -116,18 +68,6 @@
       "descriptionEn": "Free software, tools and useful resources for designers and creators.",
       "status": "comingSoon",
       "url": "section.html?section=programs",
-      "enabled": true,
-      "target": "web"
-    },
-    {
-      "id": "other",
-      "icon": "🧰",
-      "ar": "أخرى",
-      "en": "Other",
-      "descriptionAr": "مصادر إضافية متنوعة سيتم إضافتها تباعًا.",
-      "descriptionEn": "More free resources and useful collections coming over time.",
-      "status": "comingSoon",
-      "url": "section.html?section=other",
       "enabled": true,
       "target": "web"
     }
