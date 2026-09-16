@@ -24,6 +24,14 @@
   },
   "sections": [
     {
+      "id": "momo",
+      "order": 9,
+      "ar": "جبيبي",
+      "en": "mody",
+      "status": "comingSoon",
+      "enabled": false
+    },
+    {
       "id": "three-d",
       "order": 5,
       "icon": "🧊",
@@ -126,14 +134,6 @@
       "url": "section.html?section=other",
       "enabled": true,
       "target": "web"
-    },
-    {
-      "id": "momo",
-      "order": 9,
-      "ar": "جبيبي",
-      "en": "mody",
-      "status": "comingSoon",
-      "enabled": false
     }
   ],
   "showViews": true,
