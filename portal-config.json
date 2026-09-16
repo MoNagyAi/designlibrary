@@ -25,28 +25,13 @@
   "sections": [
     {
       "id": "momo",
-      "order": 1,
       "ar": "جبيبي",
       "en": "mody",
       "status": "comingSoon",
       "enabled": false
     },
     {
-      "id": "three-d",
-      "order": 2,
-      "icon": "🧊",
-      "ar": "ثري دي",
-      "en": "3D",
-      "descriptionAr": "موديلات وخامات وملفات وموارد ثلاثية الأبعاد مجانية.",
-      "descriptionEn": "Free 3D models, materials, files and resources.",
-      "status": "live",
-      "url": "https://github.com/MoNagyAi/designlibrary/blob/main/(2_gb_)_-_%D8%AA%D9%88%D9%84%D9%83%D9%8A%D8%AA.html",
-      "enabled": true,
-      "target": "web"
-    },
-    {
       "id": "MAGY",
-      "order": 3,
       "icon": "🧊",
       "ar": "ناجي",
       "en": "NAGY",
@@ -59,7 +44,6 @@
     },
     {
       "id": "graphics",
-      "order": 4,
       "icon": "🎨",
       "ar": "جرافيك",
       "en": "Graphics",
@@ -71,8 +55,19 @@
       "target": "web"
     },
     {
+      "id": "three-d",
+      "icon": "🧊",
+      "ar": "ثري دي",
+      "en": "3D",
+      "descriptionAr": "موديلات وخامات وملفات وموارد ثلاثية الأبعاد مجانية.",
+      "descriptionEn": "Free 3D models, materials, files and resources.",
+      "status": "live",
+      "url": "https://github.com/MoNagyAi/designlibrary/blob/main/(2_gb_)_-_%D8%AA%D9%88%D9%84%D9%83%D9%8A%D8%AA.html",
+      "enabled": true,
+      "target": "web"
+    },
+    {
       "id": "books",
-      "order": 5,
       "icon": "📚",
       "ar": "كتب",
       "en": "Books",
@@ -85,7 +80,6 @@
     },
     {
       "id": "courses",
-      "order": 6,
       "icon": "🎓",
       "ar": "كورسات",
       "en": "Courses",
@@ -98,7 +92,6 @@
     },
     {
       "id": "ai",
-      "order": 7,
       "icon": "✨",
       "ar": "الذكاء الاصطناعي",
       "en": "AI",
@@ -111,7 +104,6 @@
     },
     {
       "id": "marketing",
-      "order": 8,
       "icon": "📣",
       "ar": "تسويق",
       "en": "Marketing",
@@ -124,7 +116,6 @@
     },
     {
       "id": "programs",
-      "order": 9,
       "icon": "💻",
       "ar": "برامج",
       "en": "Software",
@@ -137,7 +128,6 @@
     },
     {
       "id": "other",
-      "order": 10,
       "icon": "🧰",
       "ar": "أخرى",
       "en": "Other",
