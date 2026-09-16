@@ -24,13 +24,6 @@
   },
   "sections": [
     {
-      "id": "momo",
-      "ar": "جبيبي",
-      "en": "mody",
-      "status": "comingSoon",
-      "enabled": false
-    },
-    {
       "id": "MAGY",
       "icon": "🧊",
       "ar": "ناجي",
