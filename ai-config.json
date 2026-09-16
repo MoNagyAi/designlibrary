@@ -34,6 +34,17 @@
   },
   "items": [
     {
+      "id": "text-to-video",
+      "icon": "🎬",
+      "ar": "نص إلى فيديو",
+      "en": "Text to Video",
+      "descriptionAr": "أدوات وبرومبتات مجانية لإنشاء فيديو من وصف نصي.",
+      "descriptionEn": "Free tools and prompts for creating video from text.",
+      "status": "comingSoon",
+      "enabled": true,
+      "free": true
+    },
+    {
       "id": "comfyui-workflows",
       "icon": "🧩",
       "ar": "مسارات ComfyUI",
@@ -95,17 +106,6 @@
       "en": "Image to Image",
       "descriptionAr": "تحويل وتطوير الصور مع الحفاظ على الفكرة أو الأسلوب.",
       "descriptionEn": "Transform and develop images while preserving concept or style.",
-      "status": "comingSoon",
-      "enabled": true,
-      "free": true
-    },
-    {
-      "id": "text-to-video",
-      "icon": "🎬",
-      "ar": "نص إلى فيديو",
-      "en": "Text to Video",
-      "descriptionAr": "أدوات وبرومبتات مجانية لإنشاء فيديو من وصف نصي.",
-      "descriptionEn": "Free tools and prompts for creating video from text.",
       "status": "comingSoon",
       "enabled": true,
       "free": true
