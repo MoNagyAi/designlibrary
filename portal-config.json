@@ -24,18 +24,6 @@
   },
   "sections": [
     {
-      "id": "books",
-      "icon": "📚",
-      "ar": "كتب جميع المجالات",
-      "en": "Books",
-      "descriptionAr": "كتب ومراجع مجانية في التصميم والفن والإبداع والتقنية.",
-      "descriptionEn": "Free books and references in design, art, creativity and technology.",
-      "status": "live",
-      "url": "section.html?section=books",
-      "enabled": true,
-      "target": "books"
-    },
-    {
       "id": "graphics",
       "icon": "🎨",
       "ar": "جرافيك",
@@ -46,6 +34,18 @@
       "url": "index.html",
       "enabled": true,
       "target": "web"
+    },
+    {
+      "id": "books",
+      "icon": "📚",
+      "ar": "كتب جميع المجالات",
+      "en": "Books",
+      "descriptionAr": "كتب ومراجع مجانية في التصميم والفن والإبداع والتقنية.",
+      "descriptionEn": "Free books and references in design, art, creativity and technology.",
+      "status": "live",
+      "url": "section.html?section=books",
+      "enabled": true,
+      "target": "books"
     },
     {
       "id": "ai",
