@@ -24,18 +24,6 @@
   },
   "sections": [
     {
-      "id": "graphics",
-      "icon": "🎨",
-      "ar": "جرافيك",
-      "en": "Graphics",
-      "descriptionAr": "قوالب، ملفات تصميم، موكاب، شعارات وموارد جرافيك مجانية.",
-      "descriptionEn": "Free templates, design files, mockups, logos and graphic resources.",
-      "status": "live",
-      "url": "index.html",
-      "enabled": true,
-      "target": "web"
-    },
-    {
       "id": "books",
       "icon": "📚",
       "ar": "كتب",
@@ -46,6 +34,18 @@
       "url": "section.html?section=books",
       "enabled": true,
       "target": "books"
+    },
+    {
+      "id": "graphics",
+      "icon": "🎨",
+      "ar": "جرافيك",
+      "en": "Graphics",
+      "descriptionAr": "قوالب، ملفات تصميم، موكاب، شعارات وموارد جرافيك مجانية.",
+      "descriptionEn": "Free templates, design files, mockups, logos and graphic resources.",
+      "status": "live",
+      "url": "index.html",
+      "enabled": true,
+      "target": "web"
     },
     {
       "id": "ai",
