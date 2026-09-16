@@ -24,6 +24,18 @@
   },
   "sections": [
     {
+      "id": "ai",
+      "icon": "✨",
+      "ar": "الذكاء الاصطناعي",
+      "en": "AI",
+      "descriptionAr": "مسارات عمل، برومبتات، أدوات وتطبيقات ذكاء اصطناعي مجانية.",
+      "descriptionEn": "Free AI workflows, prompts, tools and apps.",
+      "status": "live",
+      "url": "ai-hub.html",
+      "enabled": true,
+      "target": "web"
+    },
+    {
       "id": "graphics",
       "icon": "🎨",
       "ar": "جرافيك",
@@ -46,18 +58,6 @@
       "url": "section.html?section=books",
       "enabled": true,
       "target": "books"
-    },
-    {
-      "id": "ai",
-      "icon": "✨",
-      "ar": "الذكاء الاصطناعي",
-      "en": "AI",
-      "descriptionAr": "مسارات عمل، برومبتات، أدوات وتطبيقات ذكاء اصطناعي مجانية.",
-      "descriptionEn": "Free AI workflows, prompts, tools and apps.",
-      "status": "live",
-      "url": "ai-hub.html",
-      "enabled": true,
-      "target": "web"
     },
     {
       "id": "nagy",
