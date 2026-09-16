@@ -24,6 +24,27 @@
   },
   "sections": [
     {
+      "id": "momo",
+      "order": 9,
+      "ar": "جبيبي",
+      "en": "mody",
+      "status": "comingSoon",
+      "enabled": false
+    },
+    {
+      "id": "three-d",
+      "order": 5,
+      "icon": "🧊",
+      "ar": "ثري دي",
+      "en": "3D",
+      "descriptionAr": "موديلات وخامات وملفات وموارد ثلاثية الأبعاد مجانية.",
+      "descriptionEn": "Free 3D models, materials, files and resources.",
+      "status": "live",
+      "url": "https://github.com/MoNagyAi/designlibrary/blob/main/(2_gb_)_-_%D8%AA%D9%88%D9%84%D9%83%D9%8A%D8%AA.html",
+      "enabled": true,
+      "target": "web"
+    },
+    {
       "id": "graphics",
       "order": 1,
       "icon": "🎨",
@@ -34,74 +55,7 @@
       "status": "live",
       "url": "index.html",
       "enabled": true,
-      "target": "web",
-      "image": "",
-      "badgeAr": "",
-      "badgeEn": ""
-    },
-    {
-      "id": "courses",
-      "order": 2,
-      "icon": "🎓",
-      "ar": "كورسات",
-      "en": "Courses",
-      "descriptionAr": "كورسات ودروس مختارة في التصميم والإبداع والتقنية.",
-      "descriptionEn": "Curated courses and tutorials in design, creativity and technology.",
-      "status": "comingSoon",
-      "url": "section.html?section=courses",
-      "enabled": true,
-      "target": "web",
-      "image": "",
-      "badgeAr": "",
-      "badgeEn": ""
-    },
-    {
-      "id": "marketing",
-      "order": 3,
-      "icon": "📣",
-      "ar": "تسويق",
-      "en": "Marketing",
-      "descriptionAr": "مصادر وأدوات وقوالب تساعد في التسويق وصناعة المحتوى.",
-      "descriptionEn": "Free resources, tools and templates for marketing and content creation.",
-      "status": "comingSoon",
-      "url": "section.html?section=marketing",
-      "enabled": true,
-      "target": "web",
-      "image": "",
-      "badgeAr": "",
-      "badgeEn": ""
-    },
-    {
-      "id": "programs",
-      "order": 4,
-      "icon": "💻",
-      "ar": "برامج",
-      "en": "Software",
-      "descriptionAr": "برامج وأدوات مجانية ومصادر مفيدة للمصممين والمبدعين.",
-      "descriptionEn": "Free software, tools and useful resources for designers and creators.",
-      "status": "comingSoon",
-      "url": "section.html?section=programs",
-      "enabled": true,
-      "target": "web",
-      "image": "",
-      "badgeAr": "",
-      "badgeEn": ""
-    },
-    {
-      "id": "three-d",
-      "order": 5,
-      "icon": "🧊",
-      "ar": "ثري دي",
-      "en": "3D",
-      "descriptionAr": "موديلات وخامات وملفات وموارد ثلاثية الأبعاد مجانية.",
-      "descriptionEn": "Free 3D models, materials, files and resources.",
-      "status": "comingSoon",
-      "url": "section.html?section=three-d",
-      "enabled": true,
-      "target": "web",
-      "image": "",
-      "badgeAr": "",
-      "badgeEn": ""
+      "target": "web"
     },
     {
       "id": "books",
@@ -114,10 +68,20 @@
       "status": "live",
       "url": "section.html?section=books",
       "enabled": true,
-      "target": "books",
-      "image": "",
-      "badgeAr": "",
-      "badgeEn": ""
+      "target": "books"
+    },
+    {
+      "id": "courses",
+      "order": 2,
+      "icon": "🎓",
+      "ar": "كورسات",
+      "en": "Courses",
+      "descriptionAr": "كورسات ودروس مختارة في التصميم والإبداع والتقنية.",
+      "descriptionEn": "Curated courses and tutorials in design, creativity and technology.",
+      "status": "comingSoon",
+      "url": "section.html?section=courses",
+      "enabled": true,
+      "target": "web"
     },
     {
       "id": "ai",
@@ -130,10 +94,33 @@
       "status": "live",
       "url": "ai-hub.html",
       "enabled": true,
-      "target": "web",
-      "image": "",
-      "badgeAr": "",
-      "badgeEn": ""
+      "target": "web"
+    },
+    {
+      "id": "marketing",
+      "order": 3,
+      "icon": "📣",
+      "ar": "تسويق",
+      "en": "Marketing",
+      "descriptionAr": "مصادر وأدوات وقوالب تساعد في التسويق وصناعة المحتوى.",
+      "descriptionEn": "Free resources, tools and templates for marketing and content creation.",
+      "status": "comingSoon",
+      "url": "section.html?section=marketing",
+      "enabled": true,
+      "target": "web"
+    },
+    {
+      "id": "programs",
+      "order": 4,
+      "icon": "💻",
+      "ar": "برامج",
+      "en": "Software",
+      "descriptionAr": "برامج وأدوات مجانية ومصادر مفيدة للمصممين والمبدعين.",
+      "descriptionEn": "Free software, tools and useful resources for designers and creators.",
+      "status": "comingSoon",
+      "url": "section.html?section=programs",
+      "enabled": true,
+      "target": "web"
     },
     {
       "id": "other",
@@ -146,10 +133,7 @@
       "status": "comingSoon",
       "url": "section.html?section=other",
       "enabled": true,
-      "target": "web",
-      "image": "",
-      "badgeAr": "",
-      "badgeEn": ""
+      "target": "web"
     }
   ],
   "showViews": true,
@@ -173,8 +157,6 @@
       "id": "privacy",
       "ar": "سياسة الخصوصية",
       "en": "Privacy policy",
-      "bodyAr": "",
-      "bodyEn": "",
       "enabled": false
     }
   ]
