@@ -60,18 +60,6 @@
       "target": "books"
     },
     {
-      "id": "nagy",
-      "icon": "✨",
-      "ar": "ناجي",
-      "en": "nagy",
-      "descriptionAr": "مسارات عمل، برومبتات، أدوات وتطبيقات ذكاء اصطناعي مجانية.",
-      "descriptionEn": "Free AI workflows, prompts, tools and apps.",
-      "status": "comingSoon",
-      "url": "ai-hub.html",
-      "enabled": true,
-      "target": "web"
-    },
-    {
       "id": "programs",
       "icon": "💻",
       "ar": "برامج",
