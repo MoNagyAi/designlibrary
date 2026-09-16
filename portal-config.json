@@ -126,6 +126,14 @@
       "url": "section.html?section=other",
       "enabled": true,
       "target": "web"
+    },
+    {
+      "id": "momo",
+      "order": 9,
+      "ar": "جبيبي",
+      "en": "mody",
+      "status": "comingSoon",
+      "enabled": false
     }
   ],
   "showViews": true,
