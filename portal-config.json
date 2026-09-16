@@ -24,16 +24,16 @@
   },
   "sections": [
     {
-      "id": "ai",
-      "icon": "✨",
-      "ar": "الذكاء الاصطناعي",
-      "en": "AI",
-      "descriptionAr": "مسارات عمل، برومبتات، أدوات وتطبيقات ذكاء اصطناعي مجانية.",
-      "descriptionEn": "Free AI workflows, prompts, tools and apps.",
+      "id": "books",
+      "icon": "📚",
+      "ar": "كتب جميع المجالات",
+      "en": "Books",
+      "descriptionAr": "كتب ومراجع مجانية في التصميم والفن والإبداع والتقنية.",
+      "descriptionEn": "Free books and references in design, art, creativity and technology.",
       "status": "live",
-      "url": "ai-hub.html",
+      "url": "section.html?section=books",
       "enabled": true,
-      "target": "web"
+      "target": "books"
     },
     {
       "id": "graphics",
@@ -48,16 +48,16 @@
       "target": "web"
     },
     {
-      "id": "books",
-      "icon": "📚",
-      "ar": "كتب جميع المجالات",
-      "en": "Books",
-      "descriptionAr": "كتب ومراجع مجانية في التصميم والفن والإبداع والتقنية.",
-      "descriptionEn": "Free books and references in design, art, creativity and technology.",
+      "id": "ai",
+      "icon": "✨",
+      "ar": "الذكاء الاصطناعي",
+      "en": "AI",
+      "descriptionAr": "مسارات عمل، برومبتات، أدوات وتطبيقات ذكاء اصطناعي مجانية.",
+      "descriptionEn": "Free AI workflows, prompts, tools and apps.",
       "status": "live",
-      "url": "section.html?section=books",
+      "url": "ai-hub.html",
       "enabled": true,
-      "target": "books"
+      "target": "web"
     },
     {
       "id": "programs",
