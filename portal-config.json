@@ -34,7 +34,7 @@
       "status": "live",
       "url": "https://contra.com/independent/discovery?r=mohamed_nagy_i4j7qoa5",
       "enabled": true,
-      "target": "web"
+      "target": "external"
     },
     {
       "id": "graphics",
