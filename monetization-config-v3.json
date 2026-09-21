@@ -10,13 +10,12 @@
       "enabled": true,
       "requiresRewarded": true,
       "poolMode": "allEnabled",
-      "categoryIndexes": [],
       "maxRewardedUnlocksPerDay": 15,
       "avoidRepeatUntilPoolExhausted": true
     }
   },
   "ads": {
-    "enabled": false,
+    "enabled": true,
     "banner": {
       "enabled": true
     },
@@ -26,11 +25,16 @@
       "dailyCap": 8
     },
     "actionInterstitial": {
-      "enabled": false,
+      "enabled": true,
       "everyActions": 5,
       "minSecondsBetweenAds": 120,
       "showNotice": true,
-      "actions": ["view", "download", "copy", "share"]
+      "actions": [
+        "view",
+        "download",
+        "copy",
+        "share"
+      ]
     },
     "rewarded": {
       "enabled": true
