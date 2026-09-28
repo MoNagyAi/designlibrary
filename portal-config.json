@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 4,
+  "revision": 5,
   "enabled": true,
   "brand": {
     "ar": "مكتبة التصميم",
@@ -52,10 +52,10 @@
       "icon": "✨",
       "ar": "الذكاء الاصطناعي",
       "en": "AI",
-      "descriptionAr": "تطبيقات ومسارات عمل وأدوات ذكاء اصطناعي مع تعليمات الاستخدام.",
-      "descriptionEn": "AI apps, workflows and tools with usage instructions.",
+      "descriptionAr": "تطبيقات ذكاء اصطناعي بالصور الأصلية وطريقة الاستخدام.",
+      "descriptionEn": "AI apps with original thumbnails and usage instructions.",
       "status": "live",
-      "url": "ai-hub.html",
+      "url": "runninghub-apps.html",
       "enabled": true,
       "target": "web"
     },
