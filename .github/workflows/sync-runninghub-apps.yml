@@ -27,7 +27,7 @@ jobs:
         run: python scripts/sync_runninghub_apps.py
       - name: Commit refreshed app catalog
         run: |
-          if git diff --quiet -- runninghub-apps-data.json; then
+          if [ -z "$(git status --porcelain -- runninghub-apps-data.json)" ]; then
             echo "No changes."
             exit 0
           fi
