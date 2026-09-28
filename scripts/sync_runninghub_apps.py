@@ -86,8 +86,8 @@ def build_instructions(title, intro):
     else:
         ar += ['أدخل الملفات أو الوصف المطلوب في الحقول الظاهرة داخل التطبيق.']
         en += ['Provide the requested files or prompt using the fields shown in the app.']
-    ar += ['راجع تكلفة التشغيل ثم اضغط Run Now وانتظر النتيجة في My Results.']
-    en += ['Review the run cost, select Run Now, and wait for the result in My Results.']
+    ar += ['اضغط Run Now وانتظر النتيجة في My Results.']
+    en += ['Select Run Now and wait for the result in My Results.']
     return '\n'.join(ar), '\n'.join(en)
 
 def main():
