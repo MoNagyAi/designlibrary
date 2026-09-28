@@ -581,7 +581,7 @@ content:
         - name: fitCenter
           label: الصورة كاملة
 - name: ai
-  label: الذكاء الاصطناعي — مجاني
+  label: الذكاء الاصطناعي — التطبيقات والأقسام
   type: group
   items:
   - name: ai_config
@@ -715,6 +715,21 @@ content:
       - name: descriptionEn
         label: English description
         type: text
+      - name: originalTitle
+        label: العنوان الأصلي للتطبيق
+        type: string
+      - name: image
+        label: رابط الصورة المصغرة الأصلي HTTPS
+        type: string
+      - name: instructionsAr
+        label: طريقة الاستخدام بالعربية — خطوة في كل سطر
+        type: text
+      - name: instructionsEn
+        label: English instructions — one step per line
+        type: text
+      - name: order
+        label: ترتيب الكارت — الأرقام الأصغر أولًا
+        type: number
       - name: status
         label: الحالة
         type: select
@@ -725,7 +740,7 @@ content:
           - name: live
             label: متاح الآن
       - name: url
-        label: الرابط
+        label: رابط الشير الكامل شامل inviteCode
         type: string
       - name: enabled
         label: إظهار
