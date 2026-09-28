@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
+  "revision": 2,
   "items": [
     {
       "id": "full-graphics-library",
@@ -19,13 +19,11 @@
       "id": "ai-creative-hub",
       "section": "ai",
       "order": 1,
-      "titleAr": "مركز الإبداع بالذكاء الاصطناعي",
-      "titleEn": "AI Creative Hub",
-      "descriptionAr": "ComfyUI Workflows وComfyUI Apps والنص إلى صورة والفيديو والبرومبتات والمزيد.",
-      "descriptionEn": "ComfyUI workflows, ComfyUI apps, text-to-image, video, prompts and more.",
-      "url": "ai-hub.html",
-      "badgeAr": "مجاني",
-      "badgeEn": "FREE",
+      "titleAr": "تطبيقات الذكاء الاصطناعي",
+      "titleEn": "AI Apps",
+      "descriptionAr": "كل تطبيقات الذكاء الاصطناعي في مكان واحد مع الصور الأصلية وطريقة الاستخدام.",
+      "descriptionEn": "All AI apps in one place with original thumbnails and usage instructions.",
+      "url": "runninghub-apps.html",
       "enabled": true
     }
   ]
