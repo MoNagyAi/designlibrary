@@ -1,0 +1,38 @@
+name: Sync RunningHub Apps
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '25 2 * * *'
+  push:
+    paths:
+      - 'scripts/sync_runninghub_apps.py'
+      - '.github/workflows/sync-runninghub-apps.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch all Mohamed Nagy RunningHub apps
+        env:
+          RUNNINGHUB_USER_ID: '1956406247538995201'
+          RUNNINGHUB_INVITE_CODE: 'qfviaawx'
+        run: python scripts/sync_runninghub_apps.py
+      - name: Commit refreshed app catalog
+        run: |
+          if git diff --quiet -- runninghub-apps-data.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add runninghub-apps-data.json
+          git commit -m "data: sync RunningHub apps"
+          git push
