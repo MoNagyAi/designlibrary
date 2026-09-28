@@ -52,7 +52,7 @@ function render(cfg){
   lastCfg=cfg;
   $('title').textContent=tr(cfg.title,lang==='en'?'AI Creative Hub':'مركز الإبداع بالذكاء الاصطناعي');
   $('subtitle').textContent=tr(cfg.subtitle,'');
-  $('freeTop').textContent='✨ '+tr(cfg.freeLabel,lang==='en'?'FREE':'مجاني')+' 100%';
+  $('freeTop').textContent='✨ '+tr(cfg.headerBadge,lang==='en'?'TOOLS & APPS':'أدوات وتطبيقات');
   document.title=$('title').textContent;
   const freeLabel=tr(cfg.freeLabel,lang==='en'?'FREE':'مجاني');
   const soonLabel=tr(cfg.comingSoonLabel,lang==='en'?'COMING SOON':'قريبًا');
