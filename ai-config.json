@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
+  "revision": 4,
   "enabled": true,
   "title": {
     "ar": "مركز الإبداع بالذكاء الاصطناعي",
@@ -165,6 +165,40 @@
       "status": "comingSoon",
       "enabled": true,
       "free": true
+    },
+    {
+      "id": "runninghub-2103139458727063553",
+      "icon": "🎬",
+      "ar": "تحويل النص إلى فيديو حتى 30 ثانية — MiniMax H3",
+      "en": "Up to 30 S T2V -high-quality ultra-fast Minimax H3",
+      "originalTitle": "Up to 30 S T2V -high-quality ultra-fast Minimax H3",
+      "image": "https://rh-hk-images.xiaoyaoyou.com/324f089e2176c2dc65fe8ca2fb8f5cfa/2026-09-24/3ba2054ecd63cc1b59f80dbf19f2f9b6.gif",
+      "url": "https://www.runninghub.ai/ai-detail/2103139458727063553?inviteCode=qfviaawx",
+      "descriptionAr": "تطبيق محمد ناجي على RunningHub — اضغط الصورة للتشغيل.",
+      "descriptionEn": "Mohamed Nagy's RunningHub app — select the image to launch.",
+      "instructionsAr": "افتح التطبيق وسجّل الدخول إلى RunningHub إذا طُلب منك.\nاكتب وصف الفيديو في خانة prompt.\nحدّد مدة الفيديو في value حتى 30 ثانية، واختر aspect_ratio والدقة megapixels من الحقول المتاحة.\nراجع تكلفة التشغيل، ثم اضغط Run Now وانتظر النتيجة.",
+      "instructionsEn": "Open the app and sign in to RunningHub if prompted.\nEnter your video description in prompt.\nSet the duration in value up to 30 seconds, and choose aspect_ratio and megapixels using the available controls.\nReview the run cost, select Run Now and wait for the result.",
+      "status": "live",
+      "enabled": true,
+      "free": false,
+      "order": 1
+    },
+    {
+      "id": "runninghub-1979165613765595138",
+      "icon": "🎬",
+      "ar": "محمد ناجي — ComfyUI بالعربي: تحويل الفيديو لستايل Pixar بدون أول فريم",
+      "en": "Mohamed Naji _ComfyUI in Arabic: Video to Pixar style conversion without the first frame",
+      "originalTitle": "Mohamed Naji _ComfyUI in Arabic: Video to Pixar style conversion without the first frame",
+      "image": "https://rh-hk-images.xiaoyaoyou.com/324f089e2176c2dc65fe8ca2fb8f5cfa/e98a8cbd32e249a78794a94b0da89529.jpeg",
+      "url": "https://www.runninghub.ai/ai-detail/1979165613765595138?inviteCode=qfviaawx",
+      "descriptionAr": "تطبيق محمد ناجي على RunningHub — اضغط الصورة للتشغيل.",
+      "descriptionEn": "Mohamed Nagy's RunningHub app — select the image to launch.",
+      "instructionsAr": "افتح التطبيق وسجّل الدخول إذا طُلب منك.\nارفع فيديو؛ يُفضّل 20 ثانية أو أقل حسب وصف المؤلف.\nلا تحتاج إلى صورة لأول فريم.\nراجع تكلفة التشغيل، ثم اضغط Run Now وانتظر النتيجة في My Results.",
+      "instructionsEn": "Open the app and sign in if prompted.\nUpload a video; the creator recommends 20 seconds or less.\nNo first-frame image is required.\nReview the run cost, select Run Now and wait for the output in My Results.",
+      "status": "live",
+      "enabled": true,
+      "free": false,
+      "order": 2
     }
   ],
   "headerBadge": {
