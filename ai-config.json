@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "revision": 4,
+  "revision": 5,
   "enabled": true,
   "title": {
     "ar": "مركز الإبداع بالذكاء الاصطناعي",
     "en": "AI Creative Hub"
   },
   "subtitle": {
-    "ar": "أدوات ومسارات وبرومبتات للمبدعين. قد يتطلب تشغيل الخدمات الخارجية رصيدًا.",
-    "en": "Tools, workflows and prompts for creators. External services may require credits."
+    "ar": "تطبيقات الذكاء الاصطناعي للمبدعين مع الصور الأصلية وطريقة الاستخدام.",
+    "en": "AI apps for creators with original thumbnails and usage instructions."
   },
   "comingSoonMessage": {
     "ar": "قريبًا — نعمل على تجهيز هذا القسم وإضافة محتوى مجاني مميز.",
@@ -27,7 +27,7 @@
     "index": 9001,
     "ar": "مركز الإبداع بالذكاء الاصطناعي",
     "en": "AI Creative Hub",
-    "page": "ai-hub.html",
+    "page": "runninghub-apps.html",
     "icon": "AI",
     "badgeAr": "أدوات وتطبيقات",
     "badgeEn": "TOOLS & APPS"
@@ -41,7 +41,7 @@
       "descriptionAr": "أدوات وبرومبتات مجانية لإنشاء فيديو من وصف نصي.",
       "descriptionEn": "Free tools and prompts for creating video from text.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -52,7 +52,7 @@
       "descriptionAr": "ملفات Workflow مجانية لـ ComfyUI للصور والفيديو والتحسين والمزيد.",
       "descriptionEn": "Free ComfyUI workflows for image, video, enhancement and more.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -63,7 +63,7 @@
       "descriptionAr": "مسارات عمل جاهزة ومنظمة للإنتاج الإبداعي بالذكاء الاصطناعي.",
       "descriptionEn": "Ready-to-use creative AI production workflows.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -74,7 +74,7 @@
       "descriptionAr": "تطبيقات محمد ناجي على RunningHub بالصور الأصلية وطريقة الاستخدام. التشغيل حسب تسعير المنصة.",
       "descriptionEn": "Mohamed Nagy's RunningHub apps with original thumbnails and instructions. Platform usage charges apply.",
       "status": "live",
-      "enabled": true,
+      "enabled": false,
       "free": false,
       "url": "runninghub-apps.html"
     },
@@ -86,7 +86,7 @@
       "descriptionAr": "برومبتات عربية وإنجليزية للصور والفيديو والتصميم السينمائي.",
       "descriptionEn": "Arabic and English prompts for images, video and cinematic creation.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -97,7 +97,7 @@
       "descriptionAr": "أدوات وأفكار مجانية لتحويل النصوص إلى صور.",
       "descriptionEn": "Free tools and ideas for generating images from text.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -108,7 +108,7 @@
       "descriptionAr": "تحويل وتطوير الصور مع الحفاظ على الفكرة أو الأسلوب.",
       "descriptionEn": "Transform and develop images while preserving concept or style.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -119,7 +119,7 @@
       "descriptionAr": "تحريك الصور وتحويلها إلى مشاهد فيديو بالذكاء الاصطناعي.",
       "descriptionEn": "Animate images and turn them into AI video scenes.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -130,7 +130,7 @@
       "descriptionAr": "تحويل أسلوب الفيديو ومعالجته بأدوات الذكاء الاصطناعي.",
       "descriptionEn": "Restyle and transform video with AI tools.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -141,7 +141,7 @@
       "descriptionAr": "طرق ومسارات عمل للحفاظ على نفس الشخصية بين الصور والمشاهد.",
       "descriptionEn": "Methods and workflows for consistent characters across shots.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -152,7 +152,7 @@
       "descriptionAr": "أدوات مجانية للصوت والتعليق الصوتي والمؤثرات والمزامنة.",
       "descriptionEn": "Free AI tools for voice, audio, sound effects and sync.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -163,7 +163,7 @@
       "descriptionAr": "تطبيقات ومواقع مختارة تساعد المصممين وصناع المحتوى.",
       "descriptionEn": "Curated apps and websites for designers and creators.",
       "status": "comingSoon",
-      "enabled": true,
+      "enabled": false,
       "free": true
     },
     {
@@ -176,8 +176,8 @@
       "url": "https://www.runninghub.ai/ai-detail/2103139458727063553?inviteCode=qfviaawx",
       "descriptionAr": "تطبيق محمد ناجي على RunningHub — اضغط الصورة للتشغيل.",
       "descriptionEn": "Mohamed Nagy's RunningHub app — select the image to launch.",
-      "instructionsAr": "افتح التطبيق وسجّل الدخول إلى RunningHub إذا طُلب منك.\nاكتب وصف الفيديو في خانة prompt.\nحدّد مدة الفيديو في value حتى 30 ثانية، واختر aspect_ratio والدقة megapixels من الحقول المتاحة.\nراجع تكلفة التشغيل، ثم اضغط Run Now وانتظر النتيجة.",
-      "instructionsEn": "Open the app and sign in to RunningHub if prompted.\nEnter your video description in prompt.\nSet the duration in value up to 30 seconds, and choose aspect_ratio and megapixels using the available controls.\nReview the run cost, select Run Now and wait for the result.",
+      "instructionsAr": "افتح التطبيق وسجّل الدخول إلى RunningHub إذا طُلب منك.\nاكتب وصف الفيديو في خانة prompt.\nحدّد مدة الفيديو في value حتى 30 ثانية، واختر aspect_ratio والدقة megapixels من الحقول المتاحة.\nاضغط Run Now وانتظر النتيجة.",
+      "instructionsEn": "Open the app and sign in to RunningHub if prompted.\nEnter your video description in prompt.\nSet the duration in value up to 30 seconds, and choose aspect_ratio and megapixels using the available controls.\nSelect Run Now and wait for the result.",
       "status": "live",
       "enabled": true,
       "free": false,
@@ -193,8 +193,8 @@
       "url": "https://www.runninghub.ai/ai-detail/1979165613765595138?inviteCode=qfviaawx",
       "descriptionAr": "تطبيق محمد ناجي على RunningHub — اضغط الصورة للتشغيل.",
       "descriptionEn": "Mohamed Nagy's RunningHub app — select the image to launch.",
-      "instructionsAr": "افتح التطبيق وسجّل الدخول إذا طُلب منك.\nارفع فيديو؛ يُفضّل 20 ثانية أو أقل حسب وصف المؤلف.\nلا تحتاج إلى صورة لأول فريم.\nراجع تكلفة التشغيل، ثم اضغط Run Now وانتظر النتيجة في My Results.",
-      "instructionsEn": "Open the app and sign in if prompted.\nUpload a video; the creator recommends 20 seconds or less.\nNo first-frame image is required.\nReview the run cost, select Run Now and wait for the output in My Results.",
+      "instructionsAr": "افتح التطبيق وسجّل الدخول إذا طُلب منك.\nارفع فيديو؛ يُفضّل 20 ثانية أو أقل حسب وصف المؤلف.\nلا تحتاج إلى صورة لأول فريم.\nاضغط Run Now وانتظر النتيجة في My Results.",
+      "instructionsEn": "Open the app and sign in if prompted.\nUpload a video; the creator recommends 20 seconds or less.\nNo first-frame image is required.\nSelect Run Now and wait for the output in My Results.",
       "status": "live",
       "enabled": true,
       "free": false,
