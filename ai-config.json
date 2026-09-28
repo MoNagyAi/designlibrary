@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
+  "revision": 3,
   "enabled": true,
   "title": {
     "ar": "مركز الإبداع بالذكاء الاصطناعي",
     "en": "AI Creative Hub"
   },
   "subtitle": {
-    "ar": "جميع الأقسام والأدوات والمسارات والبرومبتات مجانية",
-    "en": "All sections, tools, workflows and prompts are free"
+    "ar": "أدوات ومسارات وبرومبتات للمبدعين. قد يتطلب تشغيل الخدمات الخارجية رصيدًا.",
+    "en": "Tools, workflows and prompts for creators. External services may require credits."
   },
   "comingSoonMessage": {
     "ar": "قريبًا — نعمل على تجهيز هذا القسم وإضافة محتوى مجاني مميز.",
@@ -29,8 +29,8 @@
     "en": "AI Creative Hub",
     "page": "ai-hub.html",
     "icon": "AI",
-    "badgeAr": "مجاني بالكامل",
-    "badgeEn": "100% FREE"
+    "badgeAr": "أدوات وتطبيقات",
+    "badgeEn": "TOOLS & APPS"
   },
   "items": [
     {
@@ -71,11 +71,12 @@
       "icon": "🖥️",
       "ar": "تطبيقات ComfyUI",
       "en": "ComfyUI Apps",
-      "descriptionAr": "تطبيقات وتجارب مبنية على ComfyUI مع وصول مجاني.",
-      "descriptionEn": "Free apps and experiences powered by ComfyUI.",
-      "status": "comingSoon",
+      "descriptionAr": "تطبيقات محمد ناجي على RunningHub بالصور الأصلية وطريقة الاستخدام. التشغيل حسب تسعير المنصة.",
+      "descriptionEn": "Mohamed Nagy's RunningHub apps with original thumbnails and instructions. Platform usage charges apply.",
+      "status": "live",
       "enabled": true,
-      "free": true
+      "free": false,
+      "url": "runninghub-apps.html"
     },
     {
       "id": "prompt-library",
@@ -165,5 +166,9 @@
       "enabled": true,
       "free": true
     }
-  ]
+  ],
+  "headerBadge": {
+    "ar": "أدوات وتطبيقات للمبدعين",
+    "en": "TOOLS & APPS FOR CREATORS"
+  }
 }
