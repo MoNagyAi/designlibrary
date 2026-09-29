@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 5,
+  "revision": 6,
   "enabled": true,
   "brand": {
     "ar": "مكتبة التصميم",
@@ -64,10 +64,10 @@
       "icon": "💻",
       "ar": "برامج",
       "en": "Software",
-      "descriptionAr": "برامج وأدوات مجانية ومصادر مفيدة للمصممين والمبدعين.",
-      "descriptionEn": "Free software, tools and useful resources for designers and creators.",
-      "status": "comingSoon",
-      "url": "section.html?section=programs",
+      "descriptionAr": "تصفّح البرامج وملفاتها حسب المجموعة، مع البحث وروابط العرض والتحميل.",
+      "descriptionEn": "Browse software files by collection, with search, preview and download links.",
+      "status": "live",
+      "url": "programs.html",
       "enabled": true,
       "target": "web"
     }
