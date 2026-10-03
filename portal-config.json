@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 6,
+  "revision": 7,
   "enabled": true,
   "brand": {
     "ar": "مكتبة التصميم",
@@ -68,6 +68,18 @@
       "descriptionEn": "Browse software files by collection, with search, preview and download links.",
       "status": "live",
       "url": "programs.html",
+      "enabled": true,
+      "target": "web"
+    },
+    {
+      "id": "courses",
+      "icon": "🎓",
+      "ar": "كورسات",
+      "en": "Courses",
+      "descriptionAr": "كورسات مجمّعة من الإنترنت للتعلّم فقط، مع البحث والتصنيفات وروابط الدروس.",
+      "descriptionEn": "Courses collected from the internet for educational use, with topic filters and lesson links.",
+      "status": "live",
+      "url": "courses.html",
       "enabled": true,
       "target": "web"
     }
