@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 7,
+  "revision": 8,
   "enabled": true,
   "brand": {
     "ar": "مكتبة التصميم",
@@ -80,6 +80,18 @@
       "descriptionEn": "Courses collected from the internet for educational use, with topic filters and lesson links.",
       "status": "live",
       "url": "courses.html",
+      "enabled": true,
+      "target": "web"
+    },
+    {
+      "id": "marketing",
+      "icon": "📣",
+      "ar": "التسويق",
+      "en": "Marketing",
+      "descriptionAr": "موارد التسويق حسب المجموعة، مع البحث وروابط العرض والتحميل. للأغراض التعليمية فقط.",
+      "descriptionEn": "Marketing resources by collection, with search, preview and download links. For educational use only.",
+      "status": "live",
+      "url": "marketing.html",
       "enabled": true,
       "target": "web"
     }
