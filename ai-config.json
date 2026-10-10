@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 5,
+  "revision": 6,
   "enabled": true,
   "title": {
     "ar": "مركز الإبداع بالذكاء الاصطناعي",
@@ -33,6 +33,23 @@
     "badgeEn": "TOOLS & APPS"
   },
   "items": [
+    {
+      "id": "runninghub-2108652760878395393",
+      "webappId": "2108652760878395393",
+      "order": 1,
+      "originalTitle": "Hotel Lobby AI Video Halal-Trend",
+      "ar": "ترند لوبي الفندق — فيديو بالذكاء الاصطناعي",
+      "en": "Hotel Lobby AI Video Halal-Trend",
+      "descriptionAr": "إنشاء فيديو ترند لوبي الفندق باستخدام الصور، مع ضبط طول الصورة ومدة الفيديو.",
+      "descriptionEn": "Create a Hotel Lobby trend video from images, with image-size and duration controls.",
+      "image": "https://rh-hk-images.xiaoyaoyou.com/324f089e2176c2dc65fe8ca2fb8f5cfa/2026-10-09/a8c1bb8a703b452cbe173c85d070d08b.gif?imageMogr2/format/webp/ignore-error/1",
+      "url": "https://www.runninghub.ai/ai-detail/2108652760878395393?inviteCode=qfviaawx",
+      "instructionsAr": "افتح التطبيق من رابط المشاركة وسجّل الدخول إلى RunningHub في المتصفح الخارجي.\nارفع الصور المطلوبة في حقول Upload Image وimage 1 وimage 2 حسب النموذج.\nاضبط أقصى طول للصورة ومدة الفيديو؛ القيم الظاهرة افتراضيًا 832 و30 ثانية.\nاترك save_output مفعّلًا لحفظ النتيجة، ثم اضغط Run Now.\nانتظر اكتمال المعالجة وافتح My Results لحفظ الفيديو. تكلفة التشغيل حسب استخدام RunningHub.",
+      "instructionsEn": "Open the share link and sign in to RunningHub in your external browser.\nProvide the required images in Upload Image, image 1 and image 2 as shown in the app.\nAdjust longest side and video duration; the displayed defaults are 832 and 30 seconds.\nKeep save_output enabled to save the result, then select Run Now.\nWait for processing and open My Results to save the video. RunningHub charges by actual usage.",
+      "enabled": true,
+      "status": "live",
+      "free": false
+    },
     {
       "id": "text-to-video",
       "icon": "🎬",
