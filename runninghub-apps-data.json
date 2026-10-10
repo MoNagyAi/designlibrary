@@ -2,12 +2,29 @@
   "schemaVersion": 1,
   "userId": "1956406247538995201",
   "inviteCode": "qfviaawx",
-  "count": 37,
+  "count": 38,
   "apps": [
+    {
+      "id": "runninghub-2108652760878395393",
+      "webappId": "2108652760878395393",
+      "order": 1,
+      "originalTitle": "Hotel Lobby AI Video Halal-Trend",
+      "ar": "ترند لوبي الفندق — فيديو بالذكاء الاصطناعي",
+      "en": "Hotel Lobby AI Video Halal-Trend",
+      "descriptionAr": "إنشاء فيديو ترند لوبي الفندق باستخدام الصور، مع ضبط طول الصورة ومدة الفيديو.",
+      "descriptionEn": "Create a Hotel Lobby trend video from images, with image-size and duration controls.",
+      "image": "https://rh-hk-images.xiaoyaoyou.com/324f089e2176c2dc65fe8ca2fb8f5cfa/2026-10-09/a8c1bb8a703b452cbe173c85d070d08b.gif?imageMogr2/format/webp/ignore-error/1",
+      "url": "https://www.runninghub.ai/ai-detail/2108652760878395393?inviteCode=qfviaawx",
+      "instructionsAr": "افتح التطبيق من رابط المشاركة وسجّل الدخول إلى RunningHub في المتصفح الخارجي.\nارفع الصور المطلوبة في حقول Upload Image وimage 1 وimage 2 حسب النموذج.\nاضبط أقصى طول للصورة ومدة الفيديو؛ القيم الظاهرة افتراضيًا 832 و30 ثانية.\nاترك save_output مفعّلًا لحفظ النتيجة، ثم اضغط Run Now.\nانتظر اكتمال المعالجة وافتح My Results لحفظ الفيديو. تكلفة التشغيل حسب استخدام RunningHub.",
+      "instructionsEn": "Open the share link and sign in to RunningHub in your external browser.\nProvide the required images in Upload Image, image 1 and image 2 as shown in the app.\nAdjust longest side and video duration; the displayed defaults are 832 and 30 seconds.\nKeep save_output enabled to save the result, then select Run Now.\nWait for processing and open My Results to save the video. RunningHub charges by actual usage.",
+      "enabled": true,
+      "status": "live",
+      "free": false
+    },
     {
       "id": "runninghub-2103139458727063553",
       "webappId": "2103139458727063553",
-      "order": 1,
+      "order": 2,
       "originalTitle": "Up to 30 S T2V -high-quality ultra-fast Minimax H3",
       "ar": "تحويل النص إلى فيديو حتى 30 ثانية — MiniMax H3",
       "en": "Up to 30 S T2V -high-quality ultra-fast Minimax H3",
@@ -24,7 +41,7 @@
     {
       "id": "runninghub-2087971970435809282",
       "webappId": "2087971970435809282",
-      "order": 2,
+      "order": 3,
       "originalTitle": "Ltx 2.5-Text To Video /T2V up to 19 second",
       "ar": "تحويل النص إلى فيديو حتى 19 ثانية — LTX 2.5",
       "en": "Ltx 2.5-Text To Video /T2V up to 19 second",
@@ -41,7 +58,7 @@
     {
       "id": "runninghub-2089327138163236865",
       "webappId": "2089327138163236865",
-      "order": 3,
+      "order": 4,
       "originalTitle": "Make ANY Character RAP 🎤 | AI Audio Lip Sync",
       "ar": "اجعل أي شخصية تغني راب — مزامنة صوت وحركة الشفاه",
       "en": "Make ANY Character RAP 🎤 | AI Audio Lip Sync",
@@ -58,7 +75,7 @@
     {
       "id": "runninghub-2089459570946449410",
       "webappId": "2089459570946449410",
-      "order": 4,
+      "order": 5,
       "originalTitle": "Krea 2 4K Detail Recovery 🔥 Fix Low-Quality Images Fast",
       "ar": "استعادة تفاصيل الصور حتى 4K — Krea 2",
       "en": "Krea 2 4K Detail Recovery 🔥 Fix Low-Quality Images Fast",
@@ -75,7 +92,7 @@
     {
       "id": "runninghub-2089473638316064770",
       "webappId": "2089473638316064770",
-      "order": 5,
+      "order": 6,
       "originalTitle": "Turn Any Image into 8K! 🤯 SeedVR 2.5 Speed Edition",
       "ar": "رفع جودة أي صورة حتى 8K — SeedVR 2.5",
       "en": "Turn Any Image into 8K! 🤯 SeedVR 2.5 Speed Edition",
@@ -92,7 +109,7 @@
     {
       "id": "runninghub-2089615124247453697",
       "webappId": "2089615124247453697",
-      "order": 6,
+      "order": 7,
       "originalTitle": "Change Any Outfit in ONE Click! 🤯 Ultra-Consistent AI",
       "ar": "تغيير الملابس بنقرة واحدة مع ثبات الشخصية",
       "en": "Change Any Outfit in ONE Click! 🤯 Ultra-Consistent AI",
@@ -109,7 +126,7 @@
     {
       "id": "runninghub-2089783656960573441",
       "webappId": "2089783656960573441",
-      "order": 7,
+      "order": 8,
       "originalTitle": "Turn Any Image into Layered PSD in ONE Click! 🤯",
       "ar": "تحويل أي صورة إلى ملف PSD بطبقات",
       "en": "Turn Any Image into Layered PSD in ONE Click! 🤯",
@@ -126,7 +143,7 @@
     {
       "id": "runninghub-2090126038039207937",
       "webappId": "2090126038039207937",
-      "order": 8,
+      "order": 9,
       "originalTitle": "Dance with Your Love in ANY World with AI! 🤯",
       "ar": "اجعل شخصيتك ترقص في أي عالم بالذكاء الاصطناعي",
       "en": "Dance with Your Love in ANY World with AI! 🤯",
@@ -143,7 +160,7 @@
     {
       "id": "runninghub-2090183480285388801",
       "webappId": "2090183480285388801",
-      "order": 9,
+      "order": 10,
       "originalTitle": "Z Image Turbo BF16 — Ultra Realistic Text-to-Image",
       "ar": "إنشاء صور فائقة الواقعية — Z Image Turbo BF16",
       "en": "Z Image Turbo BF16 — Ultra Realistic Text-to-Image",
@@ -160,7 +177,7 @@
     {
       "id": "runninghub-2090198401685446658",
       "webappId": "2090198401685446658",
-      "order": 10,
+      "order": 11,
       "originalTitle": "LTX2.5, AI digital human for presenting",
       "ar": "مقدم رقمي بالذكاء الاصطناعي — LTX 2.5",
       "en": "LTX2.5, AI digital human for presenting",
@@ -177,7 +194,7 @@
     {
       "id": "runninghub-2091466149318307841",
       "webappId": "2091466149318307841",
-      "order": 11,
+      "order": 12,
       "originalTitle": "Stable Audio 3: Text to SFX",
       "ar": "تحويل النص إلى مؤثرات صوتية — Stable Audio 3",
       "en": "Stable Audio 3: Text to SFX",
@@ -194,7 +211,7 @@
     {
       "id": "runninghub-2091449182024839169",
       "webappId": "2091449182024839169",
-      "order": 12,
+      "order": 13,
       "originalTitle": "SCAIL2 Optimized VIDEO + IMAGE = SAME MOTION VIDEO",
       "ar": "نقل نفس الحركة من فيديو إلى صورة — SCAIL2",
       "en": "SCAIL2 Optimized VIDEO + IMAGE = SAME MOTION VIDEO",
@@ -211,7 +228,7 @@
     {
       "id": "runninghub-2091430910456832001",
       "webappId": "2091430910456832001",
-      "order": 13,
+      "order": 14,
       "originalTitle": "Turn One Image into a Full Cinematic Scene in One",
       "ar": "تحويل صورة واحدة إلى مشهد سينمائي كامل",
       "en": "Turn One Image into a Full Cinematic Scene in One",
@@ -228,7 +245,7 @@
     {
       "id": "runninghub-2091422268177072129",
       "webappId": "2091422268177072129",
-      "order": 14,
+      "order": 15,
       "originalTitle": "🤯 QWEN 2512 vs FLUX.2 vs Z-IMAGE vs KLEIN",
       "ar": "مقارنة QWEN 2512 وFLUX.2 وZ-IMAGE وKLEIN",
       "en": "🤯 QWEN 2512 vs FLUX.2 vs Z-IMAGE vs KLEIN",
@@ -245,7 +262,7 @@
     {
       "id": "runninghub-2090849170264760322",
       "webappId": "2090849170264760322",
-      "order": 15,
+      "order": 16,
       "originalTitle": "SAME CHARACTER. SAME SCENE. 100+ ANGLES! 🤯",
       "ar": "نفس الشخصية والمشهد بأكثر من 100 زاوية",
       "en": "SAME CHARACTER. SAME SCENE. 100+ ANGLES! 🤯",
@@ -262,7 +279,7 @@
     {
       "id": "runninghub-2090797772554452993",
       "webappId": "2090797772554452993",
-      "order": 16,
+      "order": 17,
       "originalTitle": "ONE CLICK OLD PHOTO RESTORATION! | FLUX.2 KLEIN 4K Reality",
       "ar": "ترميم الصور القديمة بنقرة واحدة — FLUX.2 KLEIN 4K",
       "en": "ONE CLICK OLD PHOTO RESTORATION! | FLUX.2 KLEIN 4K Reality",
@@ -279,7 +296,7 @@
     {
       "id": "runninghub-2090796238807969793",
       "webappId": "2090796238807969793",
-      "order": 17,
+      "order": 18,
       "originalTitle": "RESTORE OLD PHOTOS IN ONE CLICK!",
       "ar": "ترميم الصور القديمة بنقرة واحدة",
       "en": "RESTORE OLD PHOTOS IN ONE CLICK!",
@@ -296,7 +313,7 @@
     {
       "id": "runninghub-2090719660434452482",
       "webappId": "2090719660434452482",
-      "order": 18,
+      "order": 19,
       "originalTitle": "AUTOMATIC VIDEO SOUND EFFECTS! 🤯",
       "ar": "إنشاء مؤثرات صوتية للفيديو تلقائيًا",
       "en": "AUTOMATIC VIDEO SOUND EFFECTS! 🤯",
@@ -313,7 +330,7 @@
     {
       "id": "runninghub-2090694546937454593",
       "webappId": "2090694546937454593",
-      "order": 19,
+      "order": 20,
       "originalTitle": "UNLIMITED LIP SYNC! 🤯🔥 IMAGE + AUDIO = VIDEO",
       "ar": "مزامنة شفاه غير محدودة — صورة وصوت إلى فيديو",
       "en": "UNLIMITED LIP SYNC! 🤯🔥 IMAGE + AUDIO = VIDEO",
@@ -330,7 +347,7 @@
     {
       "id": "runninghub-2089406981988106242",
       "webappId": "2089406981988106242",
-      "order": 20,
+      "order": 21,
       "originalTitle": "LTX Digital Human: Talk, Sing & Perfect Lip Sync",
       "ar": "شخصية رقمية تتحدث وتغني مع مزامنة شفاه — LTX",
       "en": "LTX Digital Human: Talk, Sing & Perfect Lip Sync",
@@ -347,7 +364,7 @@
     {
       "id": "runninghub-2088325932113674241",
       "webappId": "2088325932113674241",
-      "order": 21,
+      "order": 22,
       "originalTitle": "LTX First to Last Frame up to 19 Seconds",
       "ar": "فيديو من أول فريم إلى آخر فريم حتى 19 ثانية — LTX",
       "en": "LTX First to Last Frame up to 19 Seconds",
@@ -364,7 +381,7 @@
     {
       "id": "runninghub-2087900991681683458",
       "webappId": "2087900991681683458",
-      "order": 22,
+      "order": 23,
       "originalTitle": "Ltx2.5-Image To Video /I2V up to 19 second",
       "ar": "تحويل الصورة إلى فيديو حتى 19 ثانية — LTX 2.5",
       "en": "Ltx2.5-Image To Video /I2V up to 19 second",
@@ -381,7 +398,7 @@
     {
       "id": "runninghub-2087527930017021953",
       "webappId": "2087527930017021953",
-      "order": 23,
+      "order": 24,
       "originalTitle": "Fastest Minimax H3 Image to Video 15 Seconds",
       "ar": "تحويل الصورة إلى فيديو 15 ثانية — MiniMax H3",
       "en": "Fastest Minimax H3 Image to Video 15 Seconds",
@@ -398,7 +415,7 @@
     {
       "id": "runninghub-2087297594757492738",
       "webappId": "2087297594757492738",
-      "order": 24,
+      "order": 25,
       "originalTitle": "Fastest Minimax H3 Text To Video 15 Seconds",
       "ar": "تحويل النص إلى فيديو 15 ثانية — MiniMax H3",
       "en": "Fastest Minimax H3 Text To Video 15 Seconds",
@@ -415,7 +432,7 @@
     {
       "id": "runninghub-2087241854446665730",
       "webappId": "2087241854446665730",
-      "order": 25,
+      "order": 26,
       "originalTitle": "Fastest Minimax H3 First+ Last Frame Video 15 Sec",
       "ar": "فيديو من أول وآخر فريم 15 ثانية — MiniMax H3",
       "en": "Fastest Minimax H3 First+ Last Frame Video 15 Sec",
@@ -432,7 +449,7 @@
     {
       "id": "runninghub-2087093347818176514",
       "webappId": "2087093347818176514",
-      "order": 26,
+      "order": 27,
       "originalTitle": "MiniMax H3 Full References to vid 15 sec 1664x928",
       "ar": "تحويل المراجع إلى فيديو 15 ثانية — MiniMax H3",
       "en": "MiniMax H3 Full References to vid 15 sec 1664x928",
@@ -449,7 +466,7 @@
     {
       "id": "runninghub-2086886042096316417",
       "webappId": "2086886042096316417",
-      "order": 27,
+      "order": 28,
       "originalTitle": "Fastest MinimaxH3 Single image audio lip-sync 15 s",
       "ar": "مزامنة شفاه من صورة وصوت 15 ثانية — MiniMax H3",
       "en": "Fastest MinimaxH3 Single image audio lip-sync 15 s",
@@ -466,7 +483,7 @@
     {
       "id": "runninghub-2086743668275752962",
       "webappId": "2086743668275752962",
-      "order": 28,
+      "order": 29,
       "originalTitle": "MiniMax H3 Storyboard With 8 Refrences To Vid 15 Sec",
       "ar": "تحويل Storyboard و8 مراجع إلى فيديو — MiniMax H3",
       "en": "MiniMax H3 Storyboard With 8 Refrences To Vid 15 Sec",
@@ -483,7 +500,7 @@
     {
       "id": "runninghub-2086710004393390081",
       "webappId": "2086710004393390081",
-      "order": 29,
+      "order": 30,
       "originalTitle": "MiniMax H3 - 9 References to Video 15 sec",
       "ar": "تحويل 9 صور مرجعية إلى فيديو 15 ثانية — MiniMax H3",
       "en": "MiniMax H3 - 9 References to Video 15 sec",
@@ -500,7 +517,7 @@
     {
       "id": "runninghub-1984273032741076993",
       "webappId": "1984273032741076993",
-      "order": 30,
+      "order": 31,
       "originalTitle": "حول لنفسك لفرعوني مودرن نموذج كوين",
       "ar": "حوّل نفسك إلى فرعوني مودرن — نموذج Qwen",
       "en": "حول لنفسك لفرعوني مودرن نموذج كوين",
@@ -517,7 +534,7 @@
     {
       "id": "runninghub-1984259626696851458",
       "webappId": "1984259626696851458",
-      "order": 31,
+      "order": 32,
       "originalTitle": "تحويل الصورة الى فيديو wan 2.2 كومفي بالعربي",
       "ar": "تحويل الصورة إلى فيديو — WAN 2.2 | كومفي بالعربي",
       "en": "تحويل الصورة الى فيديو wan 2.2 كومفي بالعربي",
@@ -534,7 +551,7 @@
     {
       "id": "runninghub-1983625904733790210",
       "webappId": "1983625904733790210",
-      "order": 32,
+      "order": 33,
       "originalTitle": "تحويل النص الى فيديو wan 2.2 كومفي بالعربي",
       "ar": "تحويل النص إلى فيديو — WAN 2.2 | كومفي بالعربي",
       "en": "تحويل النص الى فيديو wan 2.2 كومفي بالعربي",
@@ -551,7 +568,7 @@
     {
       "id": "runninghub-1981842469719556097",
       "webappId": "1981842469719556097",
-      "order": 33,
+      "order": 34,
       "originalTitle": "تحويل الفيديو لأي ستايل وبدون وصف _محمد ناجي",
       "ar": "تحويل الفيديو لأي ستايل بدون وصف — محمد ناجي",
       "en": "تحويل الفيديو لأي ستايل وبدون وصف _محمد ناجي",
@@ -568,7 +585,7 @@
     {
       "id": "runninghub-1980647132560539650",
       "webappId": "1980647132560539650",
-      "order": 34,
+      "order": 35,
       "originalTitle": "محمد ناجي_كومفي بالعربي_8 زوايا مختلفة لشخصية من صورة واحدة ثابتة",
       "ar": "إنشاء 8 زوايا مختلفة لشخصية من صورة واحدة",
       "en": "محمد ناجي_كومفي بالعربي_8 زوايا مختلفة لشخصية من صورة واحدة ثابتة",
@@ -585,7 +602,7 @@
     {
       "id": "runninghub-1980371160674295809",
       "webappId": "1980371160674295809",
-      "order": 35,
+      "order": 36,
       "originalTitle": "ليبسينج متحدث واحد صورة+صوت=فيديو محمد ناجي _كومفي بالعربي",
       "ar": "ليب سينك لمتحدث واحد — صورة + صوت = فيديو",
       "en": "ليبسينج متحدث واحد صورة+صوت=فيديو محمد ناجي _كومفي بالعربي",
@@ -602,7 +619,7 @@
     {
       "id": "runninghub-1979165613765595138",
       "webappId": "1979165613765595138",
-      "order": 36,
+      "order": 37,
       "originalTitle": "محمد ناجي _كومفي باللغة العربية تحويل الفيديو لاستايل بيكسار وبدون أول فريم",
       "ar": "تحويل الفيديو إلى ستايل Pixar بدون أول فريم",
       "en": "محمد ناجي _كومفي باللغة العربية تحويل الفيديو لاستايل بيكسار وبدون أول فريم",
@@ -619,7 +636,7 @@
     {
       "id": "runninghub-1978885072088633345",
       "webappId": "1978885072088633345",
-      "order": 37,
+      "order": 38,
       "originalTitle": "محمد ناجي _كومفي باللغة العربية عمل لقطات سينمائية لشخصية ثابتة",
       "ar": "إنشاء لقطات سينمائية لشخصية ثابتة",
       "en": "محمد ناجي _كومفي باللغة العربية عمل لقطات سينمائية لشخصية ثابتة",
@@ -633,5 +650,6 @@
       "status": "live",
       "free": false
     }
-  ]
+  ],
+  "updatedAt": "2026-10-10"
 }
